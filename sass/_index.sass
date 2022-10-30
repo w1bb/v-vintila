@@ -272,9 +272,11 @@
                                 .project-description
                                     padding: 16px 20px 16px 20px
                         
-                        &.last::before
-                            border-left: none !important
-                            border-right: none !important
+                        &.last
+                            padding-bottom: 72px !important
+                            &::before
+                                border-left: none !important
+                                border-right: none !important
 
                         .img
                             width: 684px
@@ -356,7 +358,7 @@
                     @include flexSet(flex-start, center)
                     flex-direction: column
                     width: 100%
-                    padding: 38px 0 0
+                    padding: 42px 0 0
 
                     .row
                         width: 100%
@@ -420,7 +422,7 @@
                                 
                                 .project-title
                                     font-size: 20px
-                                    line-height: 1
+                                    line-height: 1.1
                                     font-weight: 600
                                     padding: 16px 0 20px
                                     width: 100%

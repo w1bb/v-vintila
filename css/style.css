@@ -377,6 +377,9 @@ body {
 #index #index-content #projects .projects-content .content .project.right .text .project-description {
   padding: 16px 20px 16px 20px;
 }
+#index #index-content #projects .projects-content .content .project.last {
+  padding-bottom: 72px !important;
+}
 #index #index-content #projects .projects-content .content .project.last::before {
   border-left: none !important;
   border-right: none !important;
@@ -469,7 +472,7 @@ body {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  padding: 38px 0 0;
+  padding: 42px 0 0;
 }
 #index #index-content #other-projects .projects-content .content .row {
   width: 100%;
@@ -541,7 +544,7 @@ body {
 }
 #index #index-content #other-projects .projects-content .content .row .item-wrapper .item .project-title {
   font-size: 20px;
-  line-height: 1;
+  line-height: 1.1;
   font-weight: 600;
   padding: 16px 0 20px;
   width: 100%;
