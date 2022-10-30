@@ -1,0 +1,450 @@
+#index
+    width: 100vw
+    height: 100vh
+    position: relative
+    background: #fff
+    top: 0
+    right: 0
+    @include fontSet("Inter", 500, 20px)
+
+    #index-nav-left
+        width: 70px
+        height: 100vh
+        background-color: #151515
+        position: fixed
+        top: 0
+        left: 0
+
+        &::before
+            display: block
+            content: ''
+            position: absolute
+            width: 2px
+            height: 100%
+            right: 0
+            background: #000
+
+
+    #index-content
+        width: calc(100% - 70px)
+        height: 100vh
+        position: absolute
+        background: #fff
+        top: 0
+        bottom: 0
+        overflow-y: auto
+        right: 0
+
+        #front-page
+            height: 100vh
+            width: 100%
+            position: relative
+            overflow: hidden
+
+            #front-page-img
+                height: 100%
+                width: 100%
+                background-image: url("../img/1667037250540.png")
+                background-size: contain
+                background-repeat: no-repeat
+                background-position-x: 0%
+                filter: grayscale(1) contrast(1.3)
+                transform: scale(1.3)
+                transition: transform 1.5s, filter 0.8s ease-in-out 1s
+                width: 100%
+                
+                &.loaded
+                    transform: scale(1)
+                    filter: grayscale(0) contrast(1)
+
+        #learn-path
+            background: #f5f4f8
+            width: 100%
+            padding: 64px 0 48px 0
+            @include flexSet(center, flex-start)
+
+            .learn-path-content
+                width: 1180px
+                @include flexSet(flex-start, center)
+                flex-direction: column
+                // background: red
+
+                .title
+                    text-align: center
+                    font-size: 32px
+                    position: relative
+                    text-transform: uppercase
+                    display: block
+                    font-weight: 700
+
+                    &::before
+                        display: block
+                        content: ''
+                        position: absolute
+                        width: 80px
+                        height: 6px
+                        background-color: #000
+                        top: 15px
+                        left: -128px
+                        line-height: 1
+                        border-radius: 5px
+
+                    &::after
+                        display: block
+                        content: ''
+                        position: absolute
+                        width: 80px
+                        height: 6px
+                        background-color: #000
+                        right: -128px
+                        top: 15px
+                        line-height: 1
+                        border-radius: 5px
+                
+                .items
+                    width: 100%
+                    padding: 48px 0 38px
+                    position: relative
+
+                    &::before
+                        display: block
+                        content: ''
+                        width: 1px
+                        top: 52px
+                        bottom: 0
+                        left: 11px
+                        background: black
+                        position: absolute
+
+                    .item
+                        font-size: 16px
+                        font-family: "Courier New"
+                        position: relative
+                        width: 100%
+                        @include flexSet(center, flex-start)
+
+                        .time
+                            width: 150px
+                            padding-left: 32px
+                            flex-shrink: 0
+                            letter-spacing: -0.5px
+                            font-weight: 600
+                            line-height: 1.25
+
+                            &::before
+                                display: block
+                                content: ''
+                                position: absolute
+                                
+                                background-color: white
+                                width: 8px
+                                height: 8px
+                                border: 2px solid #000
+                                border-radius: 50%
+                                top: 3px
+                                left: 6px
+                                z-index: 2
+                            
+                            &.start::before
+                                background-color: #abc
+                    
+                            &.end::after
+                                display: block
+                                content: ''
+                                position: absolute
+
+                                width: 5px
+                                top: 10px
+                                left: 9px
+                                background: #f5f4f8
+                                bottom: -38px
+                                z-index: 1
+                        
+                        .details
+                            @include flexSet(center, flex-start)
+                            font-family: "Courier New"
+                            flex-direction: column
+                            flex-grow: 1
+
+                            div
+                                text-align: justify
+                                line-height: 1.25
+                                font-weight: 300
+                                font-size: 16px
+                                letter-spacing: -0.5px
+                                padding-bottom: 8px
+
+                                b
+                                    display: inline
+                                    font-weight: 600
+                
+                .all-awards
+                    width: 100%
+                    @include flexSet(space-between, flex-start)
+
+                    .one-award
+
+                        .award-section-title
+                            text-transform: uppercase
+                            display: block
+                            font-weight: 700
+                            width: 100%
+                        
+                        .awards
+                            width: 100%
+                            padding: 24px 0 0
+
+                            .award
+                                width: 100%
+                                font-size: 16px
+                                font-family: "Courier New"
+                                position: relative
+                                @include flexSet(center, flex-start)
+                                flex-direction: column
+                                padding-left: 12px
+                                padding-bottom: 12px
+
+                                .name
+                                    font-weight: 600
+                                    line-height: 1
+
+                                    &::before
+                                        display: block
+                                        content: ''
+                                        position: absolute
+                                        left: -12px
+                                        width: 8px
+                                        height: 8px
+                                        border-top: solid 2px black
+                                        border-right: solid 2px black
+                                        transform: rotate(45deg)
+                                        top: 2px
+            
+        #projects
+            padding: 64px 0 0
+            width: 100%
+            @include flexSet(center, flex-start)
+            
+            .projects-content
+                width: 1180px
+                @include flexSet(flex-start, center)
+                flex-direction: column
+
+                .title
+                    width: 100%
+                    text-transform: uppercase
+                    font-weight: 700
+                    font-size: 32px
+                
+                .content
+                    @include flexSet(flex-start, center)
+                    flex-direction: column
+                    width: 100%
+                    padding: 48px 0 0
+
+                    .project
+                        width: 100%
+                        padding-bottom: 96px
+                        position: relative
+
+                        &::before
+                            display: block
+                            content: ''
+                            position: absolute
+                            width: 50%
+                            height: 90px
+                            bottom: 3px
+
+                        &.left
+                            @include flexSet(flex-start, flex-start)
+                            &::before
+                                border-right: dashed 2px #666
+                            .text
+                                align-items: flex-end
+                                .project-description
+                                    padding: 16px 20px 16px 20px
+                        &.right
+                            @include flexSet(flex-end, flex-start)
+                            &::before
+                                border-left: dashed 2px #666
+                            .text
+                                align-items: flex-start
+                                .project-description
+                                    padding: 16px 20px 16px 20px
+                        
+                        &.last::before
+                            border-left: none !important
+                            border-right: none !important
+
+                        .img
+                            width: 684px
+                            height: 400px
+                            background: #f5f4f8
+                            border-radius: 4px
+                        
+                        .text
+                            width: 100%
+                            height: 400px
+                            position: absolute
+                            top: 0
+                            left: 0
+                            display: flex
+                            justify-content: center
+                            flex-direction: column
+
+                            .date-info
+                                font-size: 16px
+                                font-family: "Courier New"
+                                letter-spacing: -0.1px
+                                line-height: 1
+                            
+                            .project-title
+                                font-size: 32px
+                                line-height: 1
+                                font-weight: 700
+                                padding: 8px 0 18px
+                            
+                            .project-description
+                                width: 50%
+                                font-size: 16px
+                                font-family: "Courier New"
+                                letter-spacing: -0.1px
+                                line-height: 1.5
+                                font-weight: 500
+                                background-color: #fff
+                                border-radius: 4px
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+                                text-align: justify
+                                box-sizing: border-box
+
+                            .tags
+                                padding: 20px 0 0
+                                font-size: 16px
+                                font-family: "Courier New"
+                                letter-spacing: -0.1px
+                                font-weight: 600
+
+                            .links
+                                padding: 16px 0 0
+                                @include flexSet(flex-end, flex-start)
+
+                                a
+                                    display: block
+                                    width: 24px
+                                    height: 24px
+                                    text-decoration: none
+                                    margin-left: 16px
+        
+        #other-projects
+            width: 100%
+            padding-bottom: 24px
+            @include flexSet(center, flex-start)
+            background-color: #fff
+
+            .projects-content
+                width: 980px
+                @include flexSet(flex-start, center)
+                flex-direction: column
+
+                .title
+                    text-transform: uppercase
+                    font-weight: 700
+                    font-size: 32px
+                    line-height: 1
+                
+                .content
+                    @include flexSet(flex-start, center)
+                    flex-direction: column
+                    width: 100%
+                    padding: 38px 0 0
+
+                    .row
+                        width: 100%
+                        @include flexSet(space-between, stretch)
+                        padding-bottom: 24px
+
+                        .item-wrapper
+                            box-sizing: border-box
+                            width: 33.33%
+                            padding: 0 12px
+
+                            .item
+                                box-sizing: border-box
+                                width: 100%
+                                border-radius: 2px
+                                background-color: #fff
+                                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+                                @include flexSet(flex-start, center)
+                                flex-direction: column
+                                padding: 0 16px
+                                height: 100%
+
+                                .top-bar
+                                    @include flexSet(space-between, center)
+                                    width: 100%
+                                    padding: 16px 0 12px
+                                    box-sizing: border-box
+                                    flex-shrink: 0
+                                    flex-grow: 0
+
+                                    .status
+                                        display: block
+                                        flex-grow: 0
+                                        flex-shrink: 0
+                                        font-family: "Courier New"
+                                        border: solid 2px #000
+                                        border-radius: 2px
+                                        letter-spacing: -0.15px
+                                        font-size: 14px
+                                        font-weight: 600
+                                        padding: 1px 4px
+
+                                        &.og
+                                            border-color: #983be4
+                                            color: #5d2583
+
+                                        &.done
+                                            border-color: #056b59
+                                            color: #044135
+                                    
+                                    .links
+                                        @include flexSet(flex-end, flex-start)
+                                        height: 100%
+
+                                        a
+                                            display: block
+                                            width: 16px
+                                            height: 16px
+                                            text-decoration: none
+                                            margin-left: 12px
+                                
+                                .project-title
+                                    font-size: 20px
+                                    line-height: 1
+                                    font-weight: 600
+                                    padding: 16px 0 20px
+                                    width: 100%
+                                    flex-shrink: 0
+                                    flex-grow: 0
+                                
+                                .project-description
+                                    font-size: 16px
+                                    font-family: "Courier New"
+                                    letter-spacing: -0.1px
+                                    line-height: 1.3
+                                    font-weight: 500
+                                    flex-grow: 1
+                                    flex-shrink: 0
+                                    width: 100%
+                                    text-align: left
+                                
+                                .tags
+                                    width: 100%
+                                    padding: 32px 0 12px
+                                    font-size: 14px
+                                    font-weight: 600
+                                    font-family: "Courier New"
+                                    letter-spacing: -0.1px
+                                    line-height: 1.2
+                                    flex-grow: 0
+                                    flex-shrink: 0
