@@ -378,13 +378,13 @@
                                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
                                 @include flexSet(flex-start, center)
                                 flex-direction: column
-                                padding: 0 16px
+                                padding: 20px
                                 height: 100%
 
                                 .top-bar
                                     @include flexSet(space-between, center)
                                     width: 100%
-                                    padding: 16px 0 12px
+                                    padding: 0 0 12px
                                     box-sizing: border-box
                                     flex-shrink: 0
                                     flex-grow: 0
@@ -442,7 +442,7 @@
                                 
                                 .tags
                                     width: 100%
-                                    padding: 32px 0 12px
+                                    padding: 32px 0 0
                                     font-size: 14px
                                     font-weight: 600
                                     font-family: "Courier New"
@@ -450,3 +450,84 @@
                                     line-height: 1.2
                                     flex-grow: 0
                                     flex-shrink: 0
+        
+        #skills
+            width: 100%
+            background-color: #f5f4f8
+            @include flexSet(center, flex-start)
+            padding: 64px 0 64px
+
+            .skills-content
+                width: 950px
+
+                .title
+                    width: 100%
+                    font-weight: 700
+                    font-size: 32px
+                    line-height: 1
+                
+                .select-skills
+                    width: 100%
+                    @include flexSet(space-between, stretch)
+
+                    .selection-list
+                        width: 50%
+                        height: 100%
+                        flex-grow: 0
+                        flex-shrink: 0
+                        padding-top: 32px
+
+                        .subtitle
+                            width: 100%
+                            line-height: 1
+                            font-weight: 600
+                            font-size: 24px
+
+                        .choices
+                            width: 100%
+                            padding-top: 16px
+
+                            .choice
+                                width: 100%
+                                font-family: "Courier New"
+                                letter-spacing: -0.1px
+                                font-size: 16px
+                                line-height: 1
+                                padding: 10px 20px 10px 20px
+                                position: relative
+                                cursor: pointer
+                                box-sizing: border-box
+                                
+                                .choice-description
+                                    visibility: hidden
+                                    height: 0
+                                    line-height: 1.2
+                                    font-weight: 500
+                                    color: #151515
+                                    box-sizing: border-box
+
+                                &::before
+                                    display: block
+                                    content: ''
+                                    position: absolute
+                                    width: 1px
+                                    height: 100%
+                                    top: 0
+                                    left: 0
+                                    background-color: #000
+                                
+                                &:hover
+                                    font-weight: 600
+                                
+                                &.active
+                                    .choice-name
+                                        font-weight: 600
+                                        padding-bottom: 6px
+                                    .choice-description
+                                        visibility: visible
+                                        height: auto
+                                    &::before
+                                        width: 3px
+                                        left: -1px
+
+                    

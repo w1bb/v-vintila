@@ -496,7 +496,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: 0 16px;
+  padding: 20px;
   height: 100%;
 }
 #index #index-content #other-projects .projects-content .content .row .item-wrapper .item .top-bar {
@@ -504,7 +504,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 16px 0 12px;
+  padding: 0 0 12px;
   box-sizing: border-box;
   flex-shrink: 0;
   flex-grow: 0;
@@ -564,7 +564,7 @@ body {
 }
 #index #index-content #other-projects .projects-content .content .row .item-wrapper .item .tags {
   width: 100%;
-  padding: 32px 0 12px;
+  padding: 32px 0 0;
   font-size: 14px;
   font-weight: 600;
   font-family: "Courier New";
@@ -572,6 +572,90 @@ body {
   line-height: 1.2;
   flex-grow: 0;
   flex-shrink: 0;
+}
+#index #index-content #skills {
+  width: 100%;
+  background-color: #f5f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 64px 0 64px;
+}
+#index #index-content #skills .skills-content {
+  width: 950px;
+}
+#index #index-content #skills .skills-content .title {
+  width: 100%;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+}
+#index #index-content #skills .skills-content .select-skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list {
+  width: 50%;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-top: 32px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
+  width: 100%;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 24px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices {
+  width: 100%;
+  padding-top: 16px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice {
+  width: 100%;
+  font-family: "Courier New";
+  letter-spacing: -0.1px;
+  font-size: 16px;
+  line-height: 1;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice .choice-description {
+  visibility: hidden;
+  height: 0;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #151515;
+  box-sizing: border-box;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice:hover {
+  font-weight: 600;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active .choice-name {
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active .choice-description {
+  visibility: visible;
+  height: auto;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active::before {
+  width: 3px;
+  left: -1px;
 }
 
 /*# sourceMappingURL=style.css.map */
