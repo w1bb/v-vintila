@@ -251,7 +251,7 @@
                             display: block
                             content: ''
                             position: absolute
-                            width: 50%
+                            width: calc(50% - 1px)
                             height: 90px
                             bottom: 3px
 
@@ -261,16 +261,16 @@
                                 border-right: dashed 2px #666
                             .text
                                 align-items: flex-end
-                                .project-description
-                                    padding: 16px 20px 16px 20px
+                                .links a
+                                    margin-left: 16px
                         &.right
                             @include flexSet(flex-end, flex-start)
                             &::before
                                 border-left: dashed 2px #666
                             .text
                                 align-items: flex-start
-                                .project-description
-                                    padding: 16px 20px 16px 20px
+                                .links a
+                                    margin-right: 16px
                         
                         &.last
                             padding-bottom: 72px !important
@@ -318,6 +318,7 @@
                                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
                                 text-align: justify
                                 box-sizing: border-box
+                                padding: 16px 20px 16px 20px
 
                             .tags
                                 padding: 20px 0 0
@@ -335,7 +336,6 @@
                                     width: 24px
                                     height: 24px
                                     text-decoration: none
-                                    margin-left: 16px
         
         #other-projects
             width: 100%

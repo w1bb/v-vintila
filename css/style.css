@@ -345,7 +345,7 @@ body {
   display: block;
   content: "";
   position: absolute;
-  width: 50%;
+  width: calc(50% - 1px);
   height: 90px;
   bottom: 3px;
 }
@@ -360,8 +360,8 @@ body {
 #index #index-content #projects .projects-content .content .project.left .text {
   align-items: flex-end;
 }
-#index #index-content #projects .projects-content .content .project.left .text .project-description {
-  padding: 16px 20px 16px 20px;
+#index #index-content #projects .projects-content .content .project.left .text .links a {
+  margin-left: 16px;
 }
 #index #index-content #projects .projects-content .content .project.right {
   display: flex;
@@ -374,8 +374,8 @@ body {
 #index #index-content #projects .projects-content .content .project.right .text {
   align-items: flex-start;
 }
-#index #index-content #projects .projects-content .content .project.right .text .project-description {
-  padding: 16px 20px 16px 20px;
+#index #index-content #projects .projects-content .content .project.right .text .links a {
+  margin-right: 16px;
 }
 #index #index-content #projects .projects-content .content .project.last {
   padding-bottom: 72px !important;
@@ -424,6 +424,7 @@ body {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   text-align: justify;
   box-sizing: border-box;
+  padding: 16px 20px 16px 20px;
 }
 #index #index-content #projects .projects-content .content .project .text .tags {
   padding: 20px 0 0;
@@ -443,7 +444,6 @@ body {
   width: 24px;
   height: 24px;
   text-decoration: none;
-  margin-left: 16px;
 }
 #index #index-content #other-projects {
   width: 100%;
