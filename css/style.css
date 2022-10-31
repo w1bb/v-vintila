@@ -63,6 +63,16 @@
   src: url("../fonts/Kale/kale.otf");
   font-weight: 500;
 }
+@font-face {
+  font-family: Courier-Prime;
+  src: url("../fonts/Courier-Prime/CourierPrime-Regular.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Courier-Prime;
+  src: url("../fonts/Courier-Prime/CourierPrime-Bold.ttf");
+  font-weight: 600;
+}
 @keyframes marquee {
   0% {
     left: 0;
@@ -134,17 +144,32 @@ body {
   flex-shrink: 0;
   flex-grow: 0;
 }
-#index #index-nav-top .real-options .option {
-  padding: 0 12px;
-}
 #index #index-nav-top .real-options .option a {
   color: #000;
   text-decoration: none;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   font-size: 16px;
   line-height: 1;
   display: block;
   letter-spacing: -0.1px;
+  position: relative;
+  box-sizing: border-box;
+  padding: 12px;
+}
+#index #index-nav-top .real-options .option a::before {
+  display: block;
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  bottom: 10px;
+  left: 12px;
+  right: 12px;
+  transform: scale(0);
+  transition: transform 0.2s cubic-bezier(0.7, 0, 0.2, 1);
+}
+#index #index-nav-top .real-options .option a:hover::before {
+  transform: scale(1);
 }
 #index #index-nav-top .download-resume {
   padding-left: 16px;
@@ -153,7 +178,7 @@ body {
 }
 #index #index-nav-top .download-resume a {
   display: block;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   font-size: 16px;
   color: #000;
   letter-spacing: -0.1px;
@@ -161,6 +186,36 @@ body {
   border: solid 2px black;
   padding: 10px 14px;
   line-height: 1;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+}
+#index #index-nav-top .download-resume a::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  transform-origin: 100% 50%;
+  box-sizing: border-box;
+  background: #fff;
+}
+#index #index-nav-top .download-resume a:hover::before {
+  transform: scale3d(0, 1, 1);
+  transform-origin: 0% 50%;
+}
+#index #index-nav-top .download-resume a span {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  color: #000;
+}
+#index #index-nav-top .download-resume a:hover span {
+  color: #fff;
 }
 #index #index-nav-left {
   width: 54px;
@@ -372,7 +427,7 @@ body {
 }
 #index #index-content #learn-path .learn-path-content .items .item {
   font-size: 16px;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   position: relative;
   width: 100%;
   display: flex;
@@ -418,7 +473,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   flex-direction: column;
   flex-grow: 1;
 }
@@ -453,7 +508,7 @@ body {
 #index #index-content #learn-path .learn-path-content .all-awards .one-award .awards .award {
   width: 100%;
   font-size: 16px;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   position: relative;
   display: flex;
   justify-content: center;
@@ -477,15 +532,6 @@ body {
   border-right: solid 2px black;
   transform: rotate(45deg);
   top: 2px;
-}
-#index #index-content #learn-path .learn-path-content .all-awards .one-award .awards .award .name.st::before {
-  border-color: #e28902 !important;
-}
-#index #index-content #learn-path .learn-path-content .all-awards .one-award .awards .award .name.nd::before {
-  border-color: #807e86 !important;
-}
-#index #index-content #learn-path .learn-path-content .all-awards .one-award .awards .award .name.rd::before {
-  border-color: #a05e54 !important;
 }
 #index #index-content #projects {
   padding: 64px 0 0;
@@ -581,7 +627,7 @@ body {
 }
 #index #index-content #projects .projects-content .content .project .text .date-info {
   font-size: 16px;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   letter-spacing: -0.1px;
   line-height: 1;
 }
@@ -594,7 +640,7 @@ body {
 #index #index-content #projects .projects-content .content .project .text .project-description {
   width: 50%;
   font-size: 16px;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   letter-spacing: -0.1px;
   line-height: 1.5;
   font-weight: 500;
@@ -608,7 +654,7 @@ body {
 #index #index-content #projects .projects-content .content .project .text .tags {
   padding: 20px 0 0;
   font-size: 16px;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   letter-spacing: -0.1px;
   font-weight: 600;
 }
@@ -692,7 +738,7 @@ body {
   display: block;
   flex-grow: 0;
   flex-shrink: 0;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   border: solid 2px #000;
   border-radius: 2px;
   letter-spacing: -0.15px;
@@ -732,7 +778,7 @@ body {
 }
 #index #index-content #other-projects .projects-content .content .row .item-wrapper .item .project-description {
   font-size: 16px;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   letter-spacing: -0.1px;
   line-height: 1.3;
   font-weight: 500;
@@ -746,7 +792,7 @@ body {
   padding: 32px 0 0;
   font-size: 14px;
   font-weight: 600;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   letter-spacing: -0.1px;
   line-height: 1.2;
   flex-grow: 0;
@@ -755,7 +801,7 @@ body {
 #index #index-content #skills {
   width: 100%;
   background-color: #f5f4f8;
-  background-image: linear-gradient(30deg, #ddd6f3, #faaca8);
+  background-image: linear-gradient(30deg, #74ebd5, #ACB6E5);
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -799,7 +845,7 @@ body {
 }
 #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice {
   width: 100%;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   letter-spacing: -0.1px;
   font-size: 18px;
   line-height: 1;
@@ -893,7 +939,7 @@ body {
 }
 #index #index-content #get-in-touch .get-in-touch-content .description {
   line-height: 1.3;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   font-size: 18px;
   letter-spacing: -0.1px;
   text-align: center;
@@ -906,7 +952,7 @@ body {
   text-decoration: none;
   background-color: #343234;
   color: #fff;
-  font-family: "Courier New";
+  font-family: "Courier-Prime";
   font-size: 20px;
   letter-spacing: -0.1px;
   transition: background-color 0.3s, color 0.3s, font-weight 0s 0.15s;
