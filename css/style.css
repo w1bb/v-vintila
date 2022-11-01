@@ -339,6 +339,9 @@ body {
   width: 22px;
   height: 22px;
 }
+#index #index-content #front-page .front-page-social-wrapper a svg.github {
+  padding-top: 2px;
+}
 #index #index-content #front-page .front-page-name-wrapper {
   position: absolute;
   height: 158px;
