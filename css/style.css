@@ -97,19 +97,13 @@ body {
 }
 
 #index {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  background: #fff;
-  top: 0;
-  right: 0;
+  background: #000;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 20px;
 }
 #index #index-nav-top {
   width: 100%;
-  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -119,10 +113,10 @@ body {
   justify-content: flex-end;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 24px 0 46px;
+  padding: 20px 24px 20px 46px;
   background: rgba(255, 255, 255, 0.5333333333);
-  backdrop-filter: blur(16px);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 #index #index-nav-top .logo {
   flex-shrink: 0;
@@ -175,6 +169,7 @@ body {
   padding-left: 16px;
   flex-shrink: 0;
   flex-grow: 0;
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 #index #index-nav-top .download-resume a {
   display: block;
@@ -217,13 +212,23 @@ body {
 #index #index-nav-top .download-resume a:hover span {
   color: #fff;
 }
+#index #index-nav-top.scrolled {
+  padding: 10px 12px 10px 24px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+#index #index-nav-top.scrolled .download-resume {
+  padding-left: 8px;
+}
 #index #index-nav-left {
+  display: none;
   width: 54px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 40px;
   z-index: 5;
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 #index #index-nav-left .content {
   width: 100%;
@@ -239,6 +244,7 @@ body {
   width: 100%;
   height: 112px;
   position: relative;
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 #index #index-nav-left .content .line::before {
   display: block;
@@ -251,12 +257,12 @@ body {
   background-color: #000;
 }
 #index #index-nav-left .content .item {
-  width: 54px;
-  height: 56px;
+  padding: 1px 0;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 #index #index-nav-left .content .item a {
   width: 54px;
@@ -268,10 +274,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color ease-out 0.3s;
+  transition: background-color 0.3s ease-out, padding 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 #index #index-nav-left .content .item a:hover {
-  background-color: rgba(0, 0, 0, 0.0941176471);
+  background-color: rgba(0, 0, 0, 0.0941176471) !important;
 }
 #index #index-nav-left .content .item a svg {
   width: 24px;
@@ -283,13 +289,17 @@ body {
 #index #index-nav-left .content .item a svg.linkedin {
   padding-left: 1px;
 }
+#index #index-nav-left.scrolled {
+  left: 24px;
+}
+#index #index-nav-left.scrolled .content .line {
+  height: 132px;
+}
+#index #index-nav-left.scrolled .content .item {
+  padding: 4px 0;
+}
 #index #index-content {
-  left: 0;
-  height: 100vh;
-  position: absolute;
   background: #fff;
-  top: 0;
-  bottom: 0;
   overflow-y: auto;
   right: 0;
 }
@@ -301,6 +311,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+#index #index-content #front-page .front-page-social-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(45deg, #7b4397, #dc2430);
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+#index #index-content #front-page .front-page-social-wrapper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  background-color: #000;
+  transition: all 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+#index #index-content #front-page .front-page-social-wrapper a:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+#index #index-content #front-page .front-page-social-wrapper a svg {
+  width: 22px;
+  height: 22px;
 }
 #index #index-content #front-page .front-page-name-wrapper {
   position: absolute;
