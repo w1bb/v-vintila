@@ -14,7 +14,6 @@ function indexNavbarOnScroll() {
 
 $(document).ready(function(){
     $("a").on('click', function(event) {
-  
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
@@ -26,4 +25,11 @@ $(document).ready(function(){
             });
         }
     });
-  });
+});
+
+function index_skills_selectSkill(e) {
+    for (let x of e.parentElement.getElementsByClassName("choice")) {
+        x.classList.remove("active");
+    }
+    e.classList.add("active");
+}
