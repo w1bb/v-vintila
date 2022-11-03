@@ -138,7 +138,25 @@ body {
   flex-shrink: 0;
   flex-grow: 0;
 }
-#index #index-nav-top .real-options .option a {
+#index #index-nav-top .real-options .separator {
+  display: block;
+  content: "";
+  height: 24px;
+  width: 1px;
+  background-color: #000;
+  margin: 0 12px;
+}
+#index #index-nav-top .real-options .option .img {
+  padding: 12px 12px;
+}
+#index #index-nav-top .real-options .option .img svg {
+  width: 16px;
+  height: 16px;
+}
+#index #index-nav-top .real-options .option .img svg.github {
+  margin-top: 2px;
+}
+#index #index-nav-top .real-options .option .text {
   color: #000;
   text-decoration: none;
   font-family: "Courier-Prime";
@@ -150,7 +168,7 @@ body {
   box-sizing: border-box;
   padding: 12px;
 }
-#index #index-nav-top .real-options .option a::before {
+#index #index-nav-top .real-options .option .text::before {
   display: block;
   content: "";
   position: absolute;
@@ -162,7 +180,7 @@ body {
   transform: scale(0);
   transition: transform 0.2s cubic-bezier(0.7, 0, 0.2, 1);
 }
-#index #index-nav-top .real-options .option a:hover::before {
+#index #index-nav-top .real-options .option .text:hover::before {
   transform: scale(1);
 }
 #index #index-nav-top .download-resume {
@@ -603,57 +621,68 @@ body {
 }
 #index #index-content #projects .projects-content .content .project {
   width: 100%;
-  padding-bottom: 96px;
+  margin-bottom: 96px;
   position: relative;
+  cursor: pointer;
 }
 #index #index-content #projects .projects-content .content .project::before {
   display: block;
   content: "";
   position: absolute;
-  width: calc(50% - 1px);
+  width: 1px;
+  left: calc(50% - 2px);
+  border-right: dashed 2px #514A9D;
   height: 90px;
-  bottom: 3px;
+  bottom: -93px;
 }
 #index #index-content #projects .projects-content .content .project.left {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
-#index #index-content #projects .projects-content .content .project.left::before {
-  border-right: dashed 2px #514A9D;
-}
 #index #index-content #projects .projects-content .content .project.left .text {
   align-items: flex-end;
+  transform-origin: right;
 }
 #index #index-content #projects .projects-content .content .project.left .text .links a {
   margin-left: 16px;
+}
+#index #index-content #projects .projects-content .content .project.left .img {
+  transform-origin: left;
 }
 #index #index-content #projects .projects-content .content .project.right {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
 }
-#index #index-content #projects .projects-content .content .project.right::before {
-  border-left: dashed 2px #514A9D;
-}
 #index #index-content #projects .projects-content .content .project.right .text {
   align-items: flex-start;
+  transform-origin: left;
 }
 #index #index-content #projects .projects-content .content .project.right .text .links a {
   margin-right: 16px;
 }
+#index #index-content #projects .projects-content .content .project.right .img {
+  transform-origin: right;
+}
 #index #index-content #projects .projects-content .content .project.last {
-  padding-bottom: 72px !important;
+  margin-bottom: 72px !important;
 }
 #index #index-content #projects .projects-content .content .project.last::before {
-  border-left: none !important;
-  border-right: none !important;
+  display: none !important;
 }
 #index #index-content #projects .projects-content .content .project .img {
   width: 684px;
   height: 400px;
   background: #f5f4f8;
   border-radius: 4px;
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+#index #index-content #projects .projects-content .content .project:hover .img {
+  transform: scale(1.02);
+}
+#index #index-content #projects .projects-content .content .project:hover .text {
+  transform: scale(1.02);
 }
 #index #index-content #projects .projects-content .content .project .text {
   width: 100%;
@@ -664,6 +693,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 #index #index-content #projects .projects-content .content .project .text .date-info {
   font-size: 16px;
@@ -763,6 +793,7 @@ body {
   flex-direction: column;
   padding: 20px;
   height: 100%;
+  cursor: pointer;
 }
 #index #index-content #other-projects .projects-content .content .row .item-wrapper .item .top-bar {
   display: flex;
@@ -1001,6 +1032,46 @@ body {
   background-color: #e8c6d6;
   color: #000;
   font-weight: 700;
+}
+
+#article {
+  position: fixed;
+  z-index: 100;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  background-color: rgba(0, 0, 0, 0.5333333333);
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.7, 0, 0.2, 1), top 0.1s ease 0.3s, left 0.1s ease 0.3s, bottom 0.1s ease 0.3s, right 0.1s ease 0.3s;
+}
+#article.visible {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+#article .wrapper {
+  position: absolute;
+  background: #fff;
+  border-radius: 12px;
+  top: 50%;
+  bottom: 50%;
+  left: calc(50% - 120px);
+  right: calc(50% - 120px);
+  transition: top 0.1s ease 0.3s, left 0.1s ease 0.3s, bottom 0.1s ease 0.3s, right 0.1s ease 0.3s;
+}
+#article.visible .wrapper {
+  top: 64px;
+  bottom: 64px;
+  left: calc(50% - 420px);
+  right: calc(50% - 420px);
+  transition: top 0.5s cubic-bezier(0.7, 0, 0.2, 1), bottom 0.5s cubic-bezier(0.7, 0, 0.2, 1), left 0.3s cubic-bezier(0.7, 0, 0.2, 1) 0.5s, right 0.3s cubic-bezier(0.7, 0, 0.2, 1) 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -39,10 +39,28 @@
             flex-shrink: 0
             flex-grow: 0
 
+            .separator
+                display: block
+                content: ''
+                height: 24px
+                width: 1px
+                background-color: #000
+                margin: 0 12px
+
             .option
                 // padding: 0 12px
 
-                a
+                .img
+                    padding: 12px 12px
+
+                    svg
+                        width: 16px
+                        height: 16px
+
+                        &.github
+                            margin-top: 2px
+
+                .text
                     color: #000
                     text-decoration: none
                     font-family: "Courier-Prime"
@@ -514,45 +532,56 @@
 
                     .project
                         width: 100%
-                        padding-bottom: 96px
+                        margin-bottom: 96px
                         position: relative
+                        cursor: pointer
 
                         &::before
                             display: block
                             content: ''
                             position: absolute
-                            width: calc(50% - 1px)
+                            width: 1px
+                            left: calc(50% - 2px)
+                            border-right: dashed 2px #514A9D
                             height: 90px
-                            bottom: 3px
+                            bottom: -93px
 
                         &.left
                             @include flexSet(flex-start, flex-start)
-                            &::before
-                                border-right: dashed 2px #514A9D
                             .text
                                 align-items: flex-end
+                                transform-origin: right
                                 .links a
                                     margin-left: 16px
+                            .img
+                                transform-origin: left
                         &.right
                             @include flexSet(flex-end, flex-start)
-                            &::before
-                                border-left: dashed 2px #514A9D
                             .text
                                 align-items: flex-start
+                                transform-origin: left
                                 .links a
                                     margin-right: 16px
+                            .img
+                                transform-origin: right
                         
                         &.last
-                            padding-bottom: 72px !important
+                            margin-bottom: 72px !important
                             &::before
-                                border-left: none !important
-                                border-right: none !important
+                                display: none !important
 
                         .img
                             width: 684px
                             height: 400px
                             background: #f5f4f8
                             border-radius: 4px
+                            transition: transform .3s cubic-bezier(0.7, 0, 0.2, 1)
+
+                        &:hover
+                            .img
+                                transform: scale(1.02)
+                            .text
+                                transform: scale(1.02)
                         
                         .text
                             width: 100%
@@ -563,6 +592,7 @@
                             display: flex
                             justify-content: center
                             flex-direction: column
+                            transition: transform .3s cubic-bezier(0.7, 0, 0.2, 1)
 
                             .date-info
                                 font-size: 16px
@@ -650,6 +680,7 @@
                                 flex-direction: column
                                 padding: 20px
                                 height: 100%
+                                cursor: pointer
 
                                 .top-bar
                                     @include flexSet(space-between, center)

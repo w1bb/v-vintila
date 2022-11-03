@@ -33,3 +33,15 @@ function index_skills_selectSkill(e) {
     }
     e.classList.add("active");
 }
+
+$('#article').on('click', function(e) {
+    if (e.target !== this)
+        return;
+    $("#article").removeClass("visible");
+});
+
+$('.article-trigger').on('click', function(e) {
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    $("#article").addClass("visible");    
+});
