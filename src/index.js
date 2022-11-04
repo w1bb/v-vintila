@@ -10,6 +10,17 @@ function indexNavbarOnScroll() {
         $("#index-nav-top").removeClass("scrolled");
         $("#index-nav-left").removeClass("scrolled");
     }
+
+    if (document.body.scrollTop > 320 || document.documentElement.scrollTop > 320) {
+        $("#go-to-top").addClass("visible");
+    } else {
+        $("#go-to-top").removeClass("visible");
+    }
+}
+
+function go_to_top() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
 $(document).ready(function(){
