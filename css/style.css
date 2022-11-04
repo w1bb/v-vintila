@@ -427,7 +427,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   border-top: solid 4px #000;
-  border-bottom: solid 4px #000;
 }
 #index #index-content #learn-path .learn-path-content {
   width: 1180px;
@@ -1064,7 +1063,64 @@ body {
   bottom: 50%;
   left: calc(50% - 120px);
   right: calc(50% - 120px);
+  box-shadow: rgba(0, 0, 0, 0.5333333333) 0px 2px 8px 0px;
   transition: top 0.1s ease 0.3s, left 0.1s ease 0.3s, bottom 0.1s ease 0.3s, right 0.1s ease 0.3s;
+  overflow: hidden;
+}
+#article .wrapper .content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+#article .wrapper .content .top-banner {
+  width: 100%;
+  height: 240px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #f5f4f8;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+#article .wrapper .content .top-banner .close-btn-wrapper {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+#article .wrapper .content .top-banner .close-btn-wrapper .close-btn {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.15s ease-out;
+}
+#article .wrapper .content .top-banner .close-btn-wrapper .close-btn:hover {
+  background-color: rgba(0, 0, 0, 0.0941176471);
+}
+#article .wrapper .content .main-info {
+  padding: 0 48px 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#article .wrapper .content .main-info .date {
+  font-size: 16px;
+  font-family: "Courier-Prime";
+  letter-spacing: -0.1px;
+  line-height: 1;
+  padding-top: 38px;
+}
+#article .wrapper .content .main-info .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  text-align: left;
+  width: 100%;
+  padding-top: 8px;
 }
 #article.visible .wrapper {
   top: 64px;

@@ -40,6 +40,12 @@ $('#article').on('click', function(e) {
     $("#article").removeClass("visible");
 });
 
+$('#article-close-btn').on('click', function(e) {
+    if (e.target !== this)
+        return;
+    $("#article").removeClass("visible");
+});
+
 $('.article-trigger').on('click', function(e) {
     e.stopPropagation();
     e.stopImmediatePropagation();
