@@ -19,8 +19,9 @@ function indexNavbarOnScroll() {
 }
 
 function go_to_top() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    $('html, body').animate({
+        scrollTop: 0
+    }, $(window).scrollTop() / 4, function(){});
 }
 
 $(document).ready(function(){
@@ -90,7 +91,8 @@ function article_content(content_of) {
                     <li>Multithreading support;</li>\
                     <li>A faster evaluation algorithm.</li>\
                 </ul>\
-                <p>For more info, please check out the <a href=\"#\"><b>code</b></a>.</p>\
+                <p>For more info, please check out the <a href=\"#\"><b>code repository</b></a>.</p>\
+                <p>The code is made available under the <a href=\"#\"><b>? license</b></a>. I value keeping my code open-source. However, it's disheartening whenever I find that someone has copied my code without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
     } else {
