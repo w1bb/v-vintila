@@ -71,7 +71,7 @@ function index_skills_selectSkill(e) {
 $('#article').on('click', function(e) {
     if (e.target !== this)
         return;
-    $("#article").removeClass("visible");
+    $("#article").removeClass();
 });
 
 $('#article-close-btn').on('click', function(e) {
@@ -220,6 +220,19 @@ function article_content(content_of) {
                 <p>So I took attitude and <b>created one</b>. Of course, this might be considered a small event, but there were 7 teams involved, and each one of them created something unique in Unity, Unreal or Godot. The chosen theme was 'the devil within'; <b>the winner team (Matei-Ștefan Ionescu, Alexandra Stoean)</b> designed a platformer which changes the realm based on the character's self evolution.</p>\
                 <p>The contest lasted for 72 hours (originaly, there were supposed to be 48h, but a bonus of 24h were later added) and the submissions <b>were judged by me</b>. The whole event happened on Discord.</p>\
                 <p>For privacy reasons (GDPR), the games were since removed from the public view. However, the screenshot from above contains four of the seven games written back then.</p>\
+            </div>"
+        );
+    } else if(content_of == "proj-HAZOSES") {
+        $("#article-main-info").html(
+            "<div class=\"date\">April 2022</div>\
+            <div class=\"title\">\"Hazoses\" Trivia Bot</div>\
+            <div class=\"text\">\
+                <p>When I participated in <a href=\"https://olympics10.eestec.ro/about\">EESTEC (10th edition)</a>, our team, <b>Hazoses</b>, qualified for both the main event and the second event. We won second place in the latter, but this project is all about the first one.</p>\
+                <p>We were tasked to design an AI in 24 hours that could answer basic trivia questions, such as 'Who is the first person to walk on the moon?' or 'When was Albert Einstein born?'. These queries were recieved by a local server that would process them and return an answer.</p>\
+                <p>Together with <b>Vlad Negoiță</b>, our team designed a <b>Python</b> script capable of answering some of these questions, but the project was far from perfect. However, the code found here is <b>open&#8209;source</b> and, most importantly, <b>written in only 12 hours</b> (there were some communication problems on our side, so we had to develop our bot in half the normal time).</p>\
+                <p>There are many issues with this code, but I will not solve any of them; the code ran its course, since it was meant to be used in the competition and nowhere else. In the future, I might recreate this AI alone.</p>\
+                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
     } else {
