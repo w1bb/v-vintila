@@ -77,7 +77,7 @@ $('#article').on('click', function(e) {
 $('#article-close-btn').on('click', function(e) {
     if (e.target !== this)
         return;
-    $("#article").removeClass("visible");
+    $("#article").removeClass();
 });
 
 $('.article-trigger').on('click', function(e) {
@@ -90,6 +90,7 @@ $('.article-trigger').on('click', function(e) {
             found = classes[i];
     article_content(found);
     $("#article").addClass("visible");
+    $("#article").addClass("visible-" + found);
 });
 
 function article_content(content_of) {
@@ -208,6 +209,17 @@ function article_content(content_of) {
                 </ul>\
                 <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
+            </div>"
+        );
+    } else if(content_of == "proj-WGJ") {
+        $("#article-main-info").html(
+            "<div class=\"date\">Spring 2020</div>\
+            <div class=\"title\">Wi's Game Jam</div>\
+            <div class=\"text\">\
+                <p>During high school, I was amazed to witness my creative friends collaborating to win different team contests. Back then, I was watching a lot of game development videos, so I thought to myself: \"Why isn't there a game jam contest in Romania?\".</p>\
+                <p>So I took attitude and <b>created one</b>. Of course, this might be considered a small event, but there were 7 teams involved, and each one of them created something unique in Unity, Unreal or Godot. The chosen theme was 'the devil within'; <b>the winner team (Matei-Ștefan Ionescu, Alexandra Stoean)</b> designed a platformer which changes the realm based on the character's self evolution.</p>\
+                <p>The contest lasted for 72 hours (originaly, there were supposed to be 48h, but a bonus of 24h were later added) and the submissions <b>were judged by me</b>. The whole event happened on Discord.</p>\
+                <p>For privacy reasons (GDPR), the games were since removed from the public view. However, the screenshot from above contains four of the seven games written back then.</p>\
             </div>"
         );
     } else {

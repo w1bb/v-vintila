@@ -1238,5 +1238,11 @@ body {
   opacity: 1;
   transition: opacity 0.3s cubic-bezier(0.7, 0, 0.2, 1) 0.8s;
 }
+#article.visible-proj-WGJ .wrapper .content .top-banner {
+  background-image: url("../img/WGJ.jpg");
+  background-repeat: repeat;
+  background-position: top;
+  background-size: contain;
+}
 
 /*# sourceMappingURL=style.css.map */
