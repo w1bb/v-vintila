@@ -80,7 +80,7 @@ function article_content(content_of) {
                 <p>Chess, as we know it today, has emerged in Spain and the rest of Southern Europe during the second half of the 15th century. Currently, chess is one of the world's most beloved games, played by millions worldwide!</p>\
                 <p>I have always wondered where its beauty came from; as I have developed a deeper understanding on the game's tactics over the years, I have decided to write a program that could play against humans (and beat them too). Such an algorithm is called a <b>chess engine</b>.</p>\
                 <p>This project was written in <b>C++</b>, following the <b>object-oriented</b> paradigm. This way, I could create an efficent algorithm with minimal overhead, while also using modern techniques that could simplify my workload.</p>\
-                <p><b>Key features</b> of this engine include:</p>\
+                <p>Key features</b> of this engine include:</p>\
                 <ul>\
                     <li>C++ 17 speed;</li>\
                     <li>An estimated rating of <a href=\"https://en.wikipedia.org/wiki/Elo_rating_system\">1800 ELO</a>;</li>\
@@ -91,8 +91,35 @@ function article_content(content_of) {
                     <li>Multithreading support;</li>\
                     <li>A faster evaluation algorithm.</li>\
                 </ul>\
-                <p>For more info, please check out the <a href=\"#\"><b>code repository</b></a>.</p>\
-                <p>The code is made available under the <a href=\"#\"><b>? license</b></a>. I value keeping my code open-source. However, it's disheartening whenever I find that someone has copied my code without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
+                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>I value keeping my code open-source. However, it's disheartening whenever I find that someone has copied my code without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
+            </div>"
+        );
+    } else if(content_of == "proj-WI-CRYPT") {
+        $("#article-main-info").html(
+            "<div class=\"date\">September 2022</div>\
+            <div class=\"title\">Wi-Crypt</div>\
+            <div class=\"text\">\
+                <p>As a replacement for the Data Encryption Standard (DES), NIST called for proposals for a new Advanced Encryption Standard (AES) in 1997. Four years later, NIST declared the block cipher Rijndael as the encyption of choice and published it as a final standard.</p>\
+                <p>Today, the algorithm is used everywhere - it secures your messages and files, it generates great pseudo-random numbers and it is even used in top&#8209;secret gouvernment documents.</p>\
+                <p>This is the reason I have decided to implement the algorithm in <b>C++</b>. My implementation is not only <b>very fast</b>, but it is also meant to give a <b>full explanation</b> of how the lookup tables were initially generated.</p>\
+                <p>Here are some of the <b>key features</b> of this project:</p>\
+                <ul>\
+                    <li>128, 192 and 256-bit encryption (decryption) support;</li>\
+                    <li>ECB, CBC, CFB, OFB and CTR encryption (decryption) modes;</li>\
+                    <li>GF(2^8) precomputations used instead of meaningless lookup tables;</li>\
+                    <li>Tests against other known implementations, such as <a href=\"https://github.com/dhuertas/AES\">dhuertas</a>' and <a href=\"https://github.com/SergeyBel/AES\">SergeyBel</a>'s in order to verify correctness;</li>\
+                    <li>Logging capabilities;</li>\
+                    <li>Great code modularization.</li>\
+                </ul>\
+                <p>All in all, this was a great project and I am proud of how it turned out. Here are some of the resoruces I have used:</p>\
+                <ul>\
+                    <li>A good starting point would be <a href=\"https://scholar.google.com/citations?user=w81afLAAAAAJ&hl=en\">Christof Paar</a>'s explanation, which can be found <a href=\"https://www.youtube.com/watch?v=NHuibtoL_qk\">on YouTube</a>;</li>\
+                    <li>The book he recommends is also a great read, <a href=\"https://www.amazon.com/Understanding-Cryptography-Textbook-Students-Practitioners/dp/3642446493\">Understanding Cryptography: A Textbook for Students and Practitioners</a>, by Christof Paar and Jan Pelzi;</li>\
+                    <li>Wikipedia also talks about <a href=\"https://en.wikipedia.org/wiki/Advanced_Encryption_Standard\">AES</a> and links to various important pieces of information that were used in the algorithm.</li>\
+                </ul>\
+                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>I value keeping my code open-source. However, it's disheartening whenever I find that someone has copied my code without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
     } else {
