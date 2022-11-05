@@ -1190,7 +1190,7 @@ body {
   letter-spacing: -0.2px !important;
   text-indent: 48px;
   line-height: 1.3;
-  text-align: justify;
+  text-align: left;
 }
 #article .wrapper .content .main-info .text a {
   text-decoration: none;
