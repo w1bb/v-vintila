@@ -712,6 +712,12 @@ body {
   border-radius: 4px;
   transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
+#index #index-content #projects .projects-content .content .project .img.WICE {
+  background-image: url("../img/wice.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 #index #index-content #projects .projects-content .content .project:hover .img {
   transform: scale(1.02);
 }
@@ -1246,6 +1252,24 @@ body {
 }
 #article.visible-proj-HAZOSES .wrapper .content .top-banner {
   background-image: url("../img/EESTEC2.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+#article.visible-proj-V-VINTILA .wrapper .content .top-banner {
+  background-image: url("../img/v-vintila.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#article.visible-proj-MN .wrapper .content .top-banner {
+  background-image: url("../img/mn3.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+#article.visible-proj-WICE .wrapper .content .top-banner {
+  background-image: url("../img/wice.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
