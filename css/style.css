@@ -756,7 +756,7 @@ body {
   font-weight: 500;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: #ddd6f3 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2666666667) 0px 2px 8px 0px;
   text-align: justify;
   box-sizing: border-box;
   padding: 16px 20px 16px 20px;
