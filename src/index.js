@@ -92,7 +92,7 @@ function article_content(content_of) {
                     <li>A faster evaluation algorithm.</li>\
                 </ul>\
                 <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
-                <p>I value keeping my code open-source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
+                <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
     } else if(content_of == "proj-WI-CRYPT") {
@@ -119,7 +119,7 @@ function article_content(content_of) {
                     <li>Wikipedia also talks about <a href=\"https://en.wikipedia.org/wiki/Advanced_Encryption_Standard\">AES</a> and links to various important pieces of information that were used in the algorithm.</li>\
                 </ul>\
                 <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
-                <p>I value keeping my code open-source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
+                <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
     } else if(content_of == "proj-N-AI-SPAM") {
@@ -148,7 +148,7 @@ function article_content(content_of) {
                 <p>The algorithm was written in <b>C</b> and it was <b>tested</b> using some custom made tests as well. The code is <b>very well documented</b>.</p>\
                 <p>Note: the original challenge also contained some other task, but that one was trivial and it was only used to filter those who wanted to win an award from those who weren't all that interested.</p>\
                 <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
-                <p>I value keeping my code open-source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
+                <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
     } else if(content_of == "proj-MN") {
@@ -157,21 +157,36 @@ function article_content(content_of) {
             <div class=\"title\">A numerical methods book</div>\
             <div class=\"text\">\
                 <p>I had always found numerical methods fascinating. However, whenever I had to study something in this field, I had always felt lost, since all resources I had found are way too vague, incomplete or completly wrong. And so, I started writing my own numerical methods book.</p>\
-                <p>The project is currently written in <b>LaTeX</b> and will be soon released under an <b>open-source</b> license. Some of the covered materials include:</p>\
+                <p>The project is currently written in <b>LaTeX</b> and will be soon released under an <b>open&#8209;source</b> license. Some of the covered materials include:</p>\
                 <ul>\
                     <li><b>LU decomposition</b>: Doolittle, Crout, Cholesky, linear system of equations, LDU decomposition and PLU explanation;</li>\
                     <li><b>QR decomposition</b>: Gram-Schmidt and its modified, more stable version, Householder and Givens;</li>\
-                    <li><b>Gaussian Elimination</b>: and its many variations, including partial pivoting, partial pivoting with a scaled pivot, total pivoting, Thomas algorithm and Gauss-Jordan Elimination;</li>\
-                    <li><b>Iterative methods</b> for solving LSE: Jacobi, Gauss-Seidel, successive over-relaxation method and gradient descent;</li>\
+                    <li><b>Gaussian Elimination</b>: and its many variations, including partial pivoting, partial pivoting with a scaled pivot, total pivoting, Thomas algorithm and Gauss&#8209;Jordan Elimination;</li>\
+                    <li><b>Iterative methods</b> for solving LSE: Jacobi, Gauss&#8209;Seidel, successive over-relaxation method and gradient descent;</li>\
                     <li><b>Non-linear equations</b>: successive approximations method, bisection method, tangent method, secant method and systems of non-linear equations;</li>\
                     <li><b>Interpolation methods</b>: polynomial methods (Vandermonde, Lagrange, Neville, Newton), spline methods, Bézier curves and De Casteljau's algorithm</li>\
                     <li><b>Approximation methods</b>: least squares methods, methods based on orthogonal polynomials and rational functions methods;</li>\
-                    <li><b>Numerical derivatives</b>: simple formula, 3-points method, Richardson extrapolation and higher-order derivatives methods;</li>\
+                    <li><b>Numerical derivatives</b>: simple formula, 3&#8209;points method, Richardson extrapolation and higher&#8209;order derivatives methods;</li>\
                     <li><b>Numerical integration</b>: quadrature methods (rectangle method, trapezoidal method and Simpson methods), Newton-Cotes methods, Romberg methods, adaptive quadratures and Gaussian quadratures;</li>\
                     <li><b>Ordinal Differential Equations</b>: Euler's method, explicit Runge-Kutta methods and multistep methods;</li>\
                 </ul>\
                 <p>Bonus materials include the <b>PageRank</b> algorithm and <b>FFT</b>. All the code presented in the book is written in <b>Octave</b>, but I plan to convert it in <b>Julia</b> in the next editions.</p>\
                 <p>However, the book is only 80% ready and it written in Romanian, so it will not be released just yet. More info will come soon.</p>\
+            </div>"
+        );
+    } else if(content_of == "proj-V-VINTILA") {
+        $("#article-main-info").html(
+            "<div class=\"date\">November 2022 (ongoing)</div>\
+            <div class=\"title\">My personal website</div>\
+            <div class=\"text\">\
+                <p>It's been years since I've first dreamt of building my own platform to publish my work with the world. After many years of hard-work, I've decided I was prepared for such a project. It might not be perfect, but it is <b>written from scratch</b> in <b>SASS</b> and <b>JavaScript</b> (<b>jQuery</b>) and I am very proud of it.</p>\
+                <p>Britany Chiang's <a href=\"/brittanychiang.com\">personal website</a> was a great inspiration. I didn't use any of her code, but I felt she deserved a shout-out. Other open&#8209;source materials used in this project include:</p>\
+                <ul>\
+                    <li>The <a href=\"https://fonts.google.com/specimen/Inter/about\">Inter</a> font;</li>\
+                    <li>The <a href=\"https://fonts.google.com/specimen/Courier+Prime/about\">Courier Prime</a> font.</li>\
+                </ul>\
+                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
     } else {
