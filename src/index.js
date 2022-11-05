@@ -26,7 +26,28 @@ function go_to_top() {
 
 $(document).ready(function(){
     indexNavbarOnScroll();
+
+    let h = window.location.hash.toLowerCase();
+    if (h === '#wi-crypt') {
+        article_content("proj-WI-CRYPT");
+        $("#article").addClass("visible");
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+    } else if (h === '#wice') {
+        article_content("proj-WICE");
+        $("#article").addClass("visible");
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+    } else if (h === '#n-ai-spam') {
+        article_content("proj-N-AI-SPAM");
+        $("#article").addClass("visible");
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+    } else if (h === '#v-vintila') {
+        article_content("proj-V-VINTILA");
+        $("#article").addClass("visible");
+        history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+
     $("a").on('click', function(event) {
+
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
@@ -62,13 +83,13 @@ $('#article-close-btn').on('click', function(e) {
 $('.article-trigger').on('click', function(e) {
     e.stopPropagation();
     e.stopImmediatePropagation();
-    $("#article").addClass("visible");
     var classes = $(this).attr("class").split(" ");
     var found = "unknown";
     for (var i = 0; i < classes.length; ++i)
         if(classes[i].startsWith("proj"))
             found = classes[i];
     article_content(found);
+    $("#article").addClass("visible");
 });
 
 function article_content(content_of) {
