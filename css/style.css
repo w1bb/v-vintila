@@ -718,6 +718,18 @@ body {
   background-position: center;
   background-size: cover;
 }
+#index #index-content #projects .projects-content .content .project .img.WI-CRYPT {
+  background-image: url("../img/wi-crypt3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#index #index-content #projects .projects-content .content .project .img.N-AI-SPAM {
+  background-image: url("../img/n-ai-spam.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 #index #index-content #projects .projects-content .content .project:hover .img {
   transform: scale(1.02);
 }
@@ -1270,6 +1282,18 @@ body {
 }
 #article.visible-proj-WICE .wrapper .content .top-banner {
   background-image: url("../img/wice.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+#article.visible-proj-WI-CRYPT .wrapper .content .top-banner {
+  background-image: url("../img/wi-crypt.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+#article.visible-proj-N-AI-SPAM .wrapper .content .top-banner {
+  background-image: url("../img/n-ai-spam2.png");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
