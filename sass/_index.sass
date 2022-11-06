@@ -1,5 +1,6 @@
 @import "./index_nav_top"
 @import "./index_other_projects"
+@import "./index_get_in_touch"
     
 #index
     // position: relative
@@ -657,97 +658,3 @@
                                     &::before
                                         width: 3px
                                         left: -1px
-
-        #get-in-touch
-            width: 100%
-            padding: 88px 0 64px
-            @include flexSet(center, flex-start)
-
-            .get-in-touch-content
-                width: 650px
-                height: 100%
-                @include flexSet(flex-start, center)
-                flex-direction: column
-
-                .title
-                    text-align: center
-                    font-size: 32px
-                    position: relative
-                    text-transform: uppercase
-                    display: block
-                    font-weight: 700
-                    line-height: 1
-
-                    &::before
-                        display: block
-                        content: ''
-                        position: absolute
-                        width: 80px
-                        height: 6px
-                        background-color: #000
-                        top: 15px
-                        left: -128px
-                        line-height: 1
-                        border-radius: 5px
-
-                    &::after
-                        display: block
-                        content: ''
-                        position: absolute
-                        width: 80px
-                        height: 6px
-                        background-color: #000
-                        right: -128px
-                        top: 15px
-                        line-height: 1
-                        border-radius: 5px
-                
-                .description
-                    line-height: 1.3
-                    font-family: "Courier-Prime"
-                    font-size: 18px
-                    letter-spacing: -0.1px
-                    text-align: center
-                    padding: 36px 0
-                
-
-                a.button
-                    display: block
-                    font-family: "Courier-Prime"
-                    font-size: 20px
-                    color: #fff
-                    letter-spacing: -0.1px
-                    text-decoration: none
-                    border: solid 2px black
-                    padding: 14px 20px
-                    line-height: 1
-                    background: #fff
-                    overflow: hidden
-                    position: relative
-
-                    &::before
-                        display: block
-                        content: ''
-                        position: absolute
-                        top: 0
-                        left: 0
-                        width: 100%
-                        height: 100%
-                        transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1)
-                        transform-origin: 50% 50%
-                        box-sizing: border-box
-                        background: #000
-
-                    &:hover::before
-                        transform: scale3d(0,0.8,1)
-                        transform-origin: 50% 50%
-                    
-                    span
-                        display: block
-                        position: relative
-                        overflow: hidden
-                        transition: color 0.3s cubic-bezier(0.7, 0, 0.2, 1)
-                        color: #fff
-
-                    &:hover span
-                        color: #000
