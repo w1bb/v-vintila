@@ -715,7 +715,7 @@
 
                     .row
                         width: 100%
-                        @include flexSet(space-between, stretch)
+                        @include flexSet(flex-start, stretch)
                         padding-bottom: 30px
 
                         .item-wrapper
@@ -733,7 +733,9 @@
                                 flex-direction: column
                                 padding: 20px
                                 height: 100%
-                                cursor: pointer
+
+                                &.article-trigger
+                                    cursor: pointer
 
                                 .top-bar
                                     @include flexSet(space-between, center)

@@ -83,14 +83,17 @@ $('#article-close-btn').on('click', function(e) {
 $('.article-trigger').on('click', function(e) {
     e.stopPropagation();
     e.stopImmediatePropagation();
-    var classes = $(this).attr("class").split(" ");
-    var found = "unknown";
-    for (var i = 0; i < classes.length; ++i)
-        if(classes[i].startsWith("proj"))
-            found = classes[i];
-    article_content(found);
-    $("#article").addClass("visible");
-    $("#article").addClass("visible-" + found);
+    console.log($(e.target))
+    if ($(e.target).is("div")) {
+        var classes = $(this).attr("class").split(" ");
+        var found = "unknown";
+        for (var i = 0; i < classes.length; ++i)
+            if(classes[i].startsWith("proj"))
+                found = classes[i];
+        article_content(found);
+        $("#article").addClass("visible");
+        $("#article").addClass("visible-" + found);
+    }
 });
 
 function article_content(content_of) {
@@ -186,7 +189,7 @@ function article_content(content_of) {
                     <li><b>Gaussian Elimination</b>: and its many variations, including partial pivoting, partial pivoting with a scaled pivot, total pivoting, Thomas algorithm and Gauss&#8209;Jordan Elimination;</li>\
                     <li><b>Iterative methods</b> for solving LSE: Jacobi, Gauss&#8209;Seidel, successive over-relaxation method and gradient descent;</li>\
                     <li><b>Non-linear equations</b>: successive approximations method, bisection method, tangent method, secant method and systems of non-linear equations;</li>\
-                    <li><b>Interpolation methods</b>: polynomial methods (Vandermonde, Lagrange, Neville, Newton), spline methods, Bézier curves and De Casteljau's algorithm</li>\
+                    <li><b>Interpolation methods</b>: polynomial methods (Vandermonde, Lagrange, Neville, Newton), spline methods, Bézier curves and De Casteljau's algorithm;</li>\
                     <li><b>Approximation methods</b>: least squares methods, methods based on orthogonal polynomials and rational functions methods;</li>\
                     <li><b>Numerical derivatives</b>: simple formula, 3&#8209;points method, Richardson extrapolation and higher&#8209;order derivatives methods;</li>\
                     <li><b>Numerical integration</b>: quadrature methods (rectangle method, trapezoidal method and Simpson methods), Newton-Cotes methods, Romberg methods, adaptive quadratures and Gaussian quadratures;</li>\
@@ -233,6 +236,17 @@ function article_content(content_of) {
                 <p>There are many issues with this code, but I will not solve any of them; the code ran its course, since it was meant to be used in the competition and nowhere else. In the future, I might recreate this AI alone.</p>\
                 <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
+            </div>"
+        );
+    } else if(content_of == "proj-MasterMinds") {
+        $("#article-main-info").html(
+            "<div class=\"date\">During high school</div>\
+            <div class=\"title\">MasterMinds</div>\
+            <div class=\"text\">\
+                <p>Until high school, I had participated in many LEGO robotics contests, but back then, I hadn't quite understood how that would shape my future. I wasn't doing remarkable advancements in robotics, but there was some special feeling when I was not only writing the code, but seeing it execute on something I built myself.</p>\
+                <p>Fast forward a few years later and I was part of the senior MasterMinds team. As a <b>Java</b> programmer, I have written the software required to qualify our team for the <b>national</b> stage of <a href=\"https://www.firstinspires.org/robotics/ftc\">FTC</a> and, in the end, <b>won third place</b>.</p>\
+                <p>The next year, I was <b>elected team leader</b>. Until high school was over, I helped my team win <b>other awards</b> (such as the Think Award and the Design Award) through excellent <b>communication skills</b> and inclusiveness.</p>\
+                <p>In university, I couldn't participate actively in the competition anymore, but I could <b>mentor</b> the other members of MasterMinds, and so I did. Due to Covid restrictions, the competition was postponed, but we had great fun building stronger bonds and learning more about robotics.</p>\
             </div>"
         );
     } else {

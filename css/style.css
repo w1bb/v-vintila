@@ -824,7 +824,7 @@ body {
 #index #index-content #other-projects .projects-content .content .row {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: stretch;
   padding-bottom: 30px;
 }
@@ -845,6 +845,8 @@ body {
   flex-direction: column;
   padding: 20px;
   height: 100%;
+}
+#index #index-content #other-projects .projects-content .content .row .item-wrapper .item.article-trigger {
   cursor: pointer;
 }
 #index #index-content #other-projects .projects-content .content .row .item-wrapper .item .top-bar {
@@ -1296,6 +1298,12 @@ body {
   background-image: url("../img/n-ai-spam2.png");
   background-repeat: no-repeat;
   background-position: top;
+  background-size: cover;
+}
+#article.visible-proj-MasterMinds .wrapper .content .top-banner {
+  background-image: url("../img/MasterMinds.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
