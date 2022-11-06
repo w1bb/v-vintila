@@ -54,7 +54,7 @@ $(document).ready(function(){
     
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 400, function(){
+            }, Math.abs($(window).scrollTop() - $(hash).offset().top) / 4, function(){
                 window.location.hash = hash;
             });
         }
