@@ -15,4 +15,16 @@
 	0%
 		left: 0
 	100%
-		left: -125%
+		left: -110%
+
+// -----------------------------------------------
+// | Responsiveness utilitites                   |
+// -----------------------------------------------
+
+@mixin responsive-max($query)
+	@media screen and (max-width: $query)
+		@content
+
+@mixin responsive-min($query)
+	@media screen and (min-width: $query)
+		@content

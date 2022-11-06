@@ -78,7 +78,7 @@
     left: 0;
   }
   100% {
-    left: -125%;
+    left: -110%;
   }
 }
 html {
@@ -146,6 +146,11 @@ body {
   background-color: #000;
   margin: 0 12px;
 }
+#index #index-nav-top .real-options #text-options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 #index #index-nav-top .real-options .option .img {
   padding: 12px 12px;
 }
@@ -182,6 +187,9 @@ body {
 }
 #index #index-nav-top .real-options .option .text:hover::before {
   transform: scale(1);
+}
+#index #index-nav-top #burger-menu-icon {
+  display: none;
 }
 #index #index-nav-top .download-resume {
   padding-left: 16px;
@@ -428,12 +436,25 @@ body {
   font-weight: 600;
   font-size: 48px;
 }
+#index #index-content #front-page .front-page-name-wrapper .front-page-name .position-wrapper {
+  width: 100%;
+  position: absolute;
+  top: -25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+}
 #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper {
   width: 100%;
   height: 25px;
   position: absolute;
   left: 0;
   bottom: -38px;
+  font-size: 16px;
 }
 #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee {
   width: 100%;
@@ -443,7 +464,7 @@ body {
 }
 #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div {
   display: block;
-  width: 250%;
+  width: 220%;
   height: 100%;
   line-height: 1;
   position: absolute;
@@ -1112,6 +1133,115 @@ body {
   color: #000;
 }
 
+@media screen and (max-width: 900px) {
+  #index #index-nav-top .real-options #text-options {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 10%;
+    transition: left 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  }
+  #index #index-nav-top .real-options #text-options.visible {
+    left: 0;
+  }
+  #index #index-nav-top .real-options #text-options .option {
+    display: block;
+    padding: calc(24px + (100vw - 412px) * 0.020618 + min(100vh - 500px, 0px) * 0.12) 0;
+  }
+  #index #index-nav-top .real-options #text-options .option a.text {
+    display: inline;
+    color: #eee;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    font-size: calc(42px + (100vw - 412px) * 0.01546 + min(100vh - 500px, 0px) * 0.05);
+    letter-spacing: 2px;
+  }
+  #index #index-nav-top .real-options #text-options .option a.text::before {
+    background-color: #fff;
+    transform: none;
+  }
+  #index #index-nav-top .real-options #text-options #close-button {
+    display: block;
+    width: calc(120px + (100vw - 500px) / 7.5);
+    height: calc(120px + (100vw - 500px) / 7.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background-image: url("../img/icons/close.svg");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #index #index-nav-top .real-options .separator {
+    display: none;
+  }
+  #index #index-nav-top .download-resume {
+    padding-right: 20px;
+  }
+  #index #index-nav-top #burger-menu-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px 2px;
+  }
+  #index #index-nav-top #burger-menu-icon .line {
+    flex-shrink: 0;
+    flex-grow: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 2px;
+  }
+  #index #index-nav-top.scrolled {
+    padding-right: 16px;
+  }
+  #index #index-nav-top.scrolled .download-resume {
+    padding-left: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #index #index-nav-top .real-options #text-options #close-button {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media screen and (max-width: 412px) {
+  #index #index-nav-top .real-options #text-options .option {
+    padding: calc(16px + (100vw - 320px) * 0.0869565 + min(100vh - 500px, 0px) * 0.12) 0;
+  }
+  #index #index-nav-top .real-options #text-options .option a.text {
+    display: inline;
+    color: #eee;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 42px;
+    font-size: calc(32px + (100vw - 320px) * 0.108695 + min(100vh - 500px, 0px) * 0.05);
+    letter-spacing: 2px;
+  }
+  #index #index-nav-top .real-options #text-options .option a.text::before {
+    transform: scale(0);
+  }
+  #index #index-nav-top .real-options #text-options .option a.text::before {
+    background-color: #fff;
+  }
+}
 #article {
   position: fixed;
   z-index: 100;

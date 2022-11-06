@@ -35,23 +35,33 @@
                         </a>
                     </div>
                     <span class="separator"></span>
-                    <div class="option">
-                        <a class="text" href="#learn-path">Education</a>
-                    </div>
-                    <div class="option">
-                        <a class="text" href="#projects">Projects</a>
-                    </div>
-                    <div class="option">
-                        <a class="text" href="#skills">Skills</a>
-                    </div>
-                    <div class="option">
-                        <a class="text" href="#get-in-touch">Contact</a>
+                    <div id="text-options">
+                        <div class="option option-text">
+                            <a class="text" href="#learn-path">Education</a>
+                        </div>
+                        <div class="option option-text">
+                            <a class="text" href="#projects">Projects</a>
+                        </div>
+                        <div class="option option-text">
+                            <a class="text" href="#skills">Skills</a>
+                        </div>
+                        <div class="option option-text">
+                            <a class="text" href="#get-in-touch">Contact</a>
+                        </div>
+                        <div id="close-button" onclick="$('#text-options').removeClass('visible');">
+                            
+                        </div>
                     </div>
                 </div>
                 <div class="download-resume">
                     <a href="download/resume.pdf">
                         <span>Résumé</span>
                     </a>
+                </div>
+                <div id="burger-menu-icon" onclick="$('#text-options').addClass('visible')">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
                 </div>
             </section>
 
@@ -78,9 +88,7 @@
             </section>
 
             <div id="go-to-top">
-                <div class="btn" onclick="go_to_top()">
-
-                </div>
+                <div class="btn" onclick="go_to_top()"></div>
             </div>
 
             <section id="index-content">
@@ -116,11 +124,14 @@
                             <div class="name-wrapper">
                                 <div class="name">Valentin-I. Vintilă</div>
                             </div>
+                            <div class="position-wrapper">
+                                <div class="position">Computer Engineer</div>
+                            </div>
                             <div class="marquee-wrapper">
                                 <div class="marquee">
                                     <div>
-                                        <span>Dedicated / curious / creative / hard-working <b>computer science engineer</b>.</span>
-                                        <span>Dedicated / curious / creative / hard-working <b>computer science engineer</b>.</span>
+                                        <span>Dedicated / curious / creative / hard-working <b>computer science student</b>.</span>
+                                        <span>Dedicated / curious / creative / hard-working <b>computer science student</b>.</span>
                                     </div>
                                 </div>
                             </div>

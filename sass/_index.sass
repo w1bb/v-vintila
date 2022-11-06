@@ -18,7 +18,6 @@
         padding: 20px 24px 20px 46px
         background: #fff8
         backdrop-filter: blur(12px)
-        // 
         transition: all .3s cubic-bezier(0.7, 0, 0.2, 1)
 
         .logo
@@ -47,6 +46,9 @@
                 background-color: #000
                 margin: 0 12px
 
+            #text-options
+                @include flexSet(flex-start, center)
+
             .option
                 // padding: 0 12px
 
@@ -59,7 +61,6 @@
 
                         &.github
                             margin-top: 2px
-
                 .text
                     color: #000
                     text-decoration: none
@@ -86,6 +87,9 @@
                     
                     &:hover::before
                         transform: scale(1)
+                
+        #burger-menu-icon
+            display: none
 
         .download-resume
             padding-left: 16px
@@ -352,6 +356,19 @@
                             line-height: 1
                             font-weight: 600
                             font-size: 48px
+                            
+                    .position-wrapper
+                        width: 100%
+                        position: absolute
+                        top: -25px
+                        @include flexSet(flex-end, center)
+                        line-height: 1
+                        font-weight: 800
+                        font-size: 14px
+                        text-transform: uppercase
+                        
+                        .position
+                            
                     
                     .marquee-wrapper
                         width: 100%
@@ -359,6 +376,7 @@
                         position: absolute
                         left: 0
                         bottom: -38px
+                        font-size: 16px
 
                         .marquee
                             width: 100%
@@ -368,7 +386,7 @@
 
                             div
                                 display: block
-                                width: 250%
+                                width: 220%
                                 height: 100%
                                 line-height: 1
                                 position: absolute
@@ -987,3 +1005,111 @@
 
                     &:hover span
                         color: #000
+
+
+@include responsive-max(1300px)
+    #index #index-content
+        #front-page
+            
+
+        #get-in-touch
+
+@include responsive-max(900px)
+    #index #index-nav-top
+        .real-options
+            #text-options
+                position: fixed
+                z-index: 1000
+                top: 0
+                left: 100%
+                width: 100vw
+                height: 100vh
+                background: #000
+                @include flexSet(center, stretch)
+                flex-direction: column
+                box-sizing: border-box
+                padding: 0 10%
+                transition: left .3s cubic-bezier(0.7, 0, 0.2, 1)
+                &.visible
+                    left: 0
+                .option
+                    display: block
+                    padding: calc(calc(24px + calc(calc(100vw - 412px) * 0.020618)) + calc(min(calc(100vh - 500px), 0px) * 0.12)) 0
+
+                    a.text
+                        display: inline
+                        color: #eee
+                        @include fontSet("Inter", 500, 42px)
+
+                        font-size: calc(calc(42px + calc(calc(100vw - 412px) * 0.01546)) + calc(min(calc(100vh - 500px), 0px) * 0.05))
+                        letter-spacing: 2px
+
+                        &::before
+                            background-color: #fff
+                            transform: none
+                #close-button
+                    display: block
+                    width: calc(120px + calc(calc(100vw - 500px) / 7.5))
+                    height: calc(120px + calc(calc(100vw - 500px) / 7.5))
+                    position: absolute
+                    top: 0
+                    right: 0
+                    cursor: pointer
+                    background-image: url('../img/icons/close.svg')
+                    background-size: 50px
+                    background-position: center
+                    background-repeat: no-repeat
+            .separator
+                display: none
+        .download-resume
+            padding-right: 20px
+        #burger-menu-icon
+            display: block
+            width: 40px
+            height: 40px
+            cursor: pointer
+            @include flexSet(space-between, stretch)
+            flex-direction: column
+            box-sizing: border-box
+            padding: 10px 2px
+            .line
+                flex-shrink: 0
+                flex-grow: 0
+                width: 100%
+                height: 2px
+                background-color: #000
+                border-radius: 2px
+        
+        &.scrolled
+            padding-right: 16px
+            .download-resume
+                padding-left: 16px
+
+@include responsive-max(500px)
+    #index #index-nav-top
+        .real-options
+            #text-options
+                #close-button
+                    width: 120px
+                    height: 120px
+
+@include responsive-max(412px)
+    #index #index-nav-top
+        .real-options
+            #text-options
+                .option
+                    padding: calc(calc(16px + calc(calc(100vw - 320px) * 0.0869565)) + calc(min(calc(100vh - 500px), 0px) * 0.12)) 0
+
+                    a.text
+                        display: inline
+                        color: #eee
+                        @include fontSet("Inter", 500, 42px)
+
+                        &::before
+                            transform: scale(0)
+
+                        font-size: calc(calc(32px + calc(calc(100vw - 320px) * 0.108695)) + calc(min(calc(100vh - 500px), 0px) * 0.05))
+                        letter-spacing: 2px
+
+                        &::before
+                            background-color: #fff
