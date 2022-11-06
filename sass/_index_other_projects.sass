@@ -163,9 +163,14 @@
                             width: 100%
                             padding: 12px
 
+@include responsive-max(500px)
+    #index #index-content
+        #other-projects
+            padding-bottom: 48px
 @include responsive-max(450px)
     #index #index-content
         #other-projects
+            padding-bottom: 24px
             .projects-content
                 padding: 0
                 .title

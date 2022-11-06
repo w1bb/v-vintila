@@ -583,7 +583,15 @@ body {
     padding: 12px;
   }
 }
+@media screen and (max-width: 500px) {
+  #index #index-content #other-projects {
+    padding-bottom: 48px;
+  }
+}
 @media screen and (max-width: 450px) {
+  #index #index-content #other-projects {
+    padding-bottom: 24px;
+  }
   #index #index-content #other-projects .projects-content {
     padding: 0;
   }
@@ -595,6 +603,223 @@ body {
   }
   #index #index-content #other-projects .projects-content .row .item-wrapper {
     padding: 8px 0 !important;
+  }
+}
+#index #index-content #skills {
+  width: 100%;
+  background-color: #f5f4f8;
+  background-image: linear-gradient(30deg, #FEAC5E, #C779D0);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 88px 0 64px;
+  transform: skewY(-3deg);
+  border-top: solid 4px #000;
+  border-bottom: solid 4px #000;
+}
+#index #index-content #skills .skills-content {
+  width: 950px;
+  transform: skewY(3deg);
+}
+#index #index-content #skills .skills-content .title {
+  width: 100%;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+}
+#index #index-content #skills .skills-content .select-skills {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list {
+  width: 50%;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding-top: 32px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
+  width: 100%;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 24px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices {
+  width: 100%;
+  padding-top: 16px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice {
+  width: 100%;
+  font-family: "Courier-Prime";
+  letter-spacing: -0.1px;
+  font-size: 18px;
+  line-height: 1;
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice .choice-description {
+  visibility: hidden;
+  height: 0;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #151515;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding-left: 16px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice::before {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice:hover {
+  font-weight: 600;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active .choice-name {
+  font-weight: 600;
+  padding-bottom: 6px;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active .choice-description {
+  visibility: visible;
+  height: auto;
+}
+#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active::before {
+  width: 3px;
+  left: -1px;
+}
+
+@media screen and (max-width: 1120px) {
+  #index #index-content #skills {
+    padding: 100px 0 76px;
+  }
+  #index #index-content #skills .skills-content {
+    width: 84.82%;
+  }
+}
+@media screen and (max-width: 990px) {
+  #index #index-content #skills {
+    padding: 64px 0;
+    transform: none;
+  }
+  #index #index-content #skills .skills-content {
+    width: 84.82%;
+    transform: none;
+  }
+}
+@media screen and (max-width: 880px) {
+  #index #index-content #skills {
+    padding: 48px 0;
+    transform: none;
+  }
+  #index #index-content #skills .skills-content {
+    width: 84.82%;
+    transform: none;
+  }
+}
+@media screen and (max-width: 775px) {
+  #index #index-content #skills .skills-content .title {
+    font-size: 42px;
+  }
+  #index #index-content #skills .skills-content .select-skills {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list {
+    width: 100%;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
+    font-size: 28px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices {
+    box-sizing: border-box;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice {
+    letter-spacing: -0.2px;
+    padding: 8px 20px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active {
+    padding: 10px 20px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice .choice-name {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #index #index-content #skills .skills-content .title {
+    font-size: 36px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list {
+    padding-top: 24px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #index #index-content #skills .skills-content {
+    width: 80%;
+  }
+  #index #index-content #skills .skills-content .title {
+    font-size: 32px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list {
+    padding-top: 18px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
+    font-size: 20px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice {
+    padding: 8px 20px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice .choice-name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #index #index-content #skills {
+    padding: 38px 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  #index #index-content #skills .skills-content .title {
+    font-size: 28px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list {
+    padding-top: 18px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
+    font-size: 18px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices {
+    padding-top: 10px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice::before {
+    left: 0;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice .choice-name {
+    font-size: 16px;
+  }
+  #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice .choice-description {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 350px) {
+  #index #index-content #skills {
+    padding: 28px 0;
+  }
+  #index #index-content #skills .skills-content {
+    width: 84%;
   }
 }
 #index #index-content #get-in-touch {
@@ -695,6 +920,11 @@ body {
   color: #000;
 }
 
+@media screen and (max-width: 775px) {
+  #index #index-content #get-in-touch {
+    padding: 88px 0;
+  }
+}
 @media screen and (max-width: 698px) {
   #index #index-content #get-in-touch .get-in-touch-content {
     overflow-x: hidden;
@@ -726,7 +956,7 @@ body {
     top: 13px;
   }
   #index #index-content #get-in-touch .get-in-touch-content .description {
-    font-size: 15px;
+    font-size: 16px;
     padding: 24px 0;
     line-height: 1.35;
   }
@@ -740,6 +970,24 @@ body {
   }
   #index #index-content #get-in-touch .get-in-touch-content .button span {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #index #index-content #get-in-touch {
+    padding: 72px 0;
+  }
+  #index #index-content #get-in-touch .get-in-touch-content .title::before {
+    right: calc(100% + 28px);
+    left: auto;
+    width: 50vw;
+  }
+  #index #index-content #get-in-touch .get-in-touch-content .title::after {
+    left: calc(100% + 28px);
+    right: auto;
+    width: 50vw;
+  }
+  #index #index-content #get-in-touch .get-in-touch-content .description {
+    font-size: 14px;
   }
 }
 #index {
@@ -1279,97 +1527,6 @@ body {
   width: 24px;
   height: 24px;
   text-decoration: none;
-}
-#index #index-content #skills {
-  width: 100%;
-  background-color: #f5f4f8;
-  background-image: linear-gradient(30deg, #FEAC5E, #C779D0);
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 88px 0 64px;
-  transform: skewY(-3deg);
-  border-top: solid 4px #000;
-  border-bottom: solid 4px #000;
-}
-#index #index-content #skills .skills-content {
-  width: 950px;
-  transform: skewY(3deg);
-}
-#index #index-content #skills .skills-content .title {
-  width: 100%;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
-}
-#index #index-content #skills .skills-content .select-skills {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list {
-  width: 50%;
-  height: 100%;
-  flex-grow: 0;
-  flex-shrink: 0;
-  padding-top: 32px;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
-  width: 100%;
-  line-height: 1;
-  font-weight: 600;
-  font-size: 24px;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .choices {
-  width: 100%;
-  padding-top: 16px;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice {
-  width: 100%;
-  font-family: "Courier-Prime";
-  letter-spacing: -0.1px;
-  font-size: 18px;
-  line-height: 1;
-  padding: 10px 20px 10px 20px;
-  position: relative;
-  cursor: pointer;
-  box-sizing: border-box;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice .choice-description {
-  visibility: hidden;
-  height: 0;
-  line-height: 1.2;
-  font-weight: 500;
-  color: #151515;
-  box-sizing: border-box;
-  font-size: 16px;
-  padding-left: 16px;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice::before {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #000;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice:hover {
-  font-weight: 600;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active .choice-name {
-  font-weight: 600;
-  padding-bottom: 6px;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active .choice-description {
-  visibility: visible;
-  height: auto;
-}
-#index #index-content #skills .skills-content .select-skills .selection-list .choices .choice.active::before {
-  width: 3px;
-  left: -1px;
 }
 
 #article {

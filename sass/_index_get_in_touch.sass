@@ -94,6 +94,10 @@
                     &:hover span
                         color: #000
 
+@include responsive-max(775px)
+    #index #index-content
+        #get-in-touch
+            padding: 88px 0
 @include responsive-max(698px)
     #index #index-content
         #get-in-touch
@@ -123,7 +127,7 @@
                     &::after
                         top: 13px
                 .description
-                    font-size: 15px
+                    font-size: 16px
                     padding: 24px 0
                     line-height: 1.35
                 .button
@@ -139,3 +143,20 @@
                 .button
                     span
                         font-size: 16px
+
+@include responsive-max(400px)
+    #index #index-content
+        #get-in-touch
+            padding: 72px 0
+            .get-in-touch-content
+                .title
+                    &::before
+                        right: calc(100% + 28px)
+                        left: auto
+                        width: 50vw
+                    &::after
+                        left: calc(100% + 28px)
+                        right: auto
+                        width: 50vw
+                .description
+                    font-size: 14px
