@@ -51,17 +51,23 @@
                     width: 64px
                     height: 64px
                     @include flexSet(flex-start, flex-end)
+                    position: fixed
 
                     .close-btn
                         width: 48px
                         height: 48px
                         cursor: pointer
                         border-radius: 50%
-                        background-color: #00000000
                         transition: background-color .15s ease-out
+                        background-color: #000000a0
+                        background-image: url('../img/icons/close.svg')
+                        background-repeat: no-repeat
+                        background-position: center
+                        background-size: 25px
+                        backdrop-filter: blur(12px)
 
                         &:hover
-                            background-color: #00000018
+                            background-color: #000000c0
 
             .main-info
                 padding: 0 48px 32px
@@ -189,3 +195,61 @@
         background-repeat: no-repeat
         background-position: center
         background-size: cover
+
+@include responsive-max(1000px)
+    #article.visible
+        .wrapper
+            top: 24px
+            bottom: 24px
+            left: 24px
+            right: 24px
+            border-radius: 0
+
+            .content
+                .top-banner
+                    border-radius: 0
+
+@include responsive-max(740px)
+    #article.visible
+        .wrapper
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            border-radius: 0
+
+            .content
+                .top-banner
+                    border-radius: 0
+
+@include responsive-max(600px)
+    #article.visible
+        .wrapper
+            .content
+                .top-banner
+                    height: 200px
+
+@include responsive-max(550px)
+    #article.visible
+        .wrapper
+            .content
+                .main-info
+                    padding: 0 32px 16px
+                    .date
+                        font-size: 14px
+                        padding-top: 30px
+                    .title
+                        font-size: 32px
+                        padding-top: 6px
+                    .text
+                        font-size: 14px
+                        padding-top: 6px
+                        text-indent: 32px
+
+                        ul
+                            li
+                                &::before
+                                    width: 5px
+                                    height: 5px
+                                    top: 4px
+                                    left: 16px

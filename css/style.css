@@ -1294,17 +1294,23 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  position: fixed;
 }
 #article .wrapper .content .top-banner .close-btn-wrapper .close-btn {
   width: 48px;
   height: 48px;
   cursor: pointer;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.15s ease-out;
+  background-color: rgba(0, 0, 0, 0.6274509804);
+  background-image: url("../img/icons/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+  backdrop-filter: blur(12px);
 }
 #article .wrapper .content .top-banner .close-btn-wrapper .close-btn:hover {
-  background-color: rgba(0, 0, 0, 0.0941176471);
+  background-color: rgba(0, 0, 0, 0.7529411765);
 }
 #article .wrapper .content .main-info {
   padding: 0 48px 32px;
@@ -1428,6 +1434,60 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (max-width: 1000px) {
+  #article.visible .wrapper {
+    top: 24px;
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+    border-radius: 0;
+  }
+  #article.visible .wrapper .content .top-banner {
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 740px) {
+  #article.visible .wrapper {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+  }
+  #article.visible .wrapper .content .top-banner {
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #article.visible .wrapper .content .top-banner {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #article.visible .wrapper .content .main-info {
+    padding: 0 32px 16px;
+  }
+  #article.visible .wrapper .content .main-info .date {
+    font-size: 14px;
+    padding-top: 30px;
+  }
+  #article.visible .wrapper .content .main-info .title {
+    font-size: 32px;
+    padding-top: 6px;
+  }
+  #article.visible .wrapper .content .main-info .text {
+    font-size: 14px;
+    padding-top: 6px;
+    text-indent: 32px;
+  }
+  #article.visible .wrapper .content .main-info .text ul li::before {
+    width: 5px;
+    height: 5px;
+    top: 4px;
+    left: 16px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
