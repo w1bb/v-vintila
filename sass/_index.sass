@@ -3,6 +3,7 @@
 @import "./index_other_projects"
 @import "./index_skills"
 @import "./index_get_in_touch"
+@import "./index_projects"
     
 #index
     // position: relative
@@ -198,7 +199,7 @@
                         font-size: 14px
                         text-transform: uppercase
                         
-                        .position
+                        // .position
                             
                     
                     .marquee-wrapper
@@ -391,152 +392,3 @@
                                         border-right: solid 2px black
                                         transform: rotate(45deg)
                                         top: 2px
-
-        #projects
-            padding: 64px 0 0
-            width: 100%
-            @include flexSet(center, flex-start)
-            
-            .projects-content
-                width: 1180px
-                @include flexSet(flex-start, center)
-                flex-direction: column
-
-                .title
-                    width: 100%
-                    text-transform: uppercase
-                    font-weight: 700
-                    font-size: 32px
-                
-                .content
-                    @include flexSet(flex-start, center)
-                    flex-direction: column
-                    width: 100%
-                    padding: 48px 0 0
-
-                    .project
-                        width: 100%
-                        margin-bottom: 96px
-                        position: relative
-                        cursor: pointer
-
-                        &::before
-                            display: block
-                            content: ''
-                            position: absolute
-                            width: 1px
-                            left: calc(50% - 2px)
-                            border-right: dashed 2px #514A9D
-                            height: 90px
-                            bottom: -93px
-
-                        &.left
-                            @include flexSet(flex-start, flex-start)
-                            .text
-                                align-items: flex-end
-                                transform-origin: right
-                                .links a
-                                    margin-left: 16px
-                            .img
-                                transform-origin: left
-                        &.right
-                            @include flexSet(flex-end, flex-start)
-                            .text
-                                align-items: flex-start
-                                transform-origin: left
-                                .links a
-                                    margin-right: 16px
-                            .img
-                                transform-origin: right
-                        
-                        &.last
-                            margin-bottom: 72px !important
-                            &::before
-                                display: none !important
-
-                        .img
-                            width: 684px
-                            height: 400px
-                            background: #f5f4f8
-                            border-radius: 4px
-                            transition: transform .3s cubic-bezier(0.7, 0, 0.2, 1)
-
-                            &.WICE
-                                background-image: url("../img/wice.jpg")
-                                background-repeat: no-repeat
-                                background-position: center
-                                background-size: cover
-
-                            &.WI-CRYPT
-                                background-image: url("../img/wi-crypt3.jpg")
-                                background-repeat: no-repeat
-                                background-position: center
-                                background-size: cover
-
-                            &.N-AI-SPAM
-                                background-image: url("../img/n-ai-spam.jpg")
-                                background-repeat: no-repeat
-                                background-position: center
-                                background-size: cover
-
-                        &:hover
-                            .img
-                                transform: scale(1.02)
-                            .text
-                                transform: scale(1.02)
-                        
-                        .text
-                            width: 100%
-                            height: 400px
-                            position: absolute
-                            top: 0
-                            left: 0
-                            display: flex
-                            justify-content: center
-                            flex-direction: column
-                            transition: transform .3s cubic-bezier(0.7, 0, 0.2, 1)
-
-                            .date-info
-                                font-size: 16px
-                                font-family: "Courier-Prime"
-                                letter-spacing: -0.1px
-                                line-height: 1
-                            
-                            .project-title
-                                font-size: 32px
-                                line-height: 1
-                                font-weight: 700
-                                padding: 8px 0 18px
-                            
-                            .project-description
-                                width: 50%
-                                font-size: 16px
-                                font-family: "Courier-Prime"
-                                letter-spacing: -0.1px
-                                line-height: 1.5
-                                font-weight: 500
-                                background-color: #fff
-                                border-radius: 4px
-                                box-shadow: #0004 0px 2px 8px 0px
-                                text-align: justify
-                                box-sizing: border-box
-                                padding: 16px 20px 16px 20px
-
-                            .tags
-                                padding: 20px 0 0
-                                font-size: 16px
-                                font-family: "Courier-Prime"
-                                letter-spacing: -0.1px
-                                font-weight: 600
-
-                            .links
-                                padding: 16px 0 0
-                                @include flexSet(flex-end, flex-start)
-
-                                a
-                                    display: block
-                                    width: 24px
-                                    height: 24px
-                                    text-decoration: none
-        
-        
