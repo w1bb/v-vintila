@@ -343,6 +343,62 @@ body {
     background-color: #fff;
   }
 }
+@media screen and (max-width: 400px) {
+  #index #index-nav-top {
+    padding-left: 12px;
+  }
+  #index #index-nav-top .logo {
+    display: none;
+  }
+  #index #index-nav-top .real-options {
+    flex-grow: 1;
+  }
+}
+#index #go-to-top {
+  position: fixed;
+  bottom: -48px;
+  right: 48px;
+  z-index: 50;
+  transition: bottom 0.3s cubic-bezier(0.7, 0, 0.2, 1), right 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+#index #go-to-top.visible {
+  bottom: 48px;
+}
+#index #go-to-top .btn {
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2666666667) 0px 2px 8px 0px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease-out;
+}
+#index #go-to-top .btn:hover {
+  transform: translateY(-2px);
+}
+#index #go-to-top .btn::before {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  content: "";
+  display: block;
+  left: calc(50% - 5px);
+  top: calc(50% - 4px);
+  border-top: solid 2px black;
+  border-right: solid 2px black;
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 480px) {
+  #index #go-to-top {
+    bottom: -32px;
+    right: 32px;
+  }
+  #index #go-to-top.visible {
+    bottom: 32px;
+  }
+}
 #index #index-content #other-projects {
   width: 100%;
   padding-bottom: 64px;
@@ -691,41 +747,6 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 20px;
-}
-#index #go-to-top {
-  position: fixed;
-  bottom: -48px;
-  right: 48px;
-  z-index: 50;
-  transition: bottom 0.3s cubic-bezier(0.7, 0, 0.2, 1);
-}
-#index #go-to-top.visible {
-  bottom: 48px;
-}
-#index #go-to-top .btn {
-  width: 48px;
-  height: 48px;
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.2666666667) 0px 2px 8px 0px;
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.2s ease-out;
-}
-#index #go-to-top .btn:hover {
-  transform: translateY(-2px);
-}
-#index #go-to-top .btn::before {
-  width: 8px;
-  height: 8px;
-  position: absolute;
-  content: "";
-  display: block;
-  left: calc(50% - 5px);
-  top: calc(50% - 4px);
-  border-top: solid 2px black;
-  border-right: solid 2px black;
-  transform: rotate(-45deg);
 }
 #index #index-nav-left {
   display: none;

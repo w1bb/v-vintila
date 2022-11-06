@@ -235,3 +235,11 @@
                         letter-spacing: 2px
                         &::before
                             background-color: #fff
+
+@include responsive-max(400px)
+    #index #index-nav-top
+        padding-left: 12px
+        .logo
+            display: none
+        .real-options
+            flex-grow: 1

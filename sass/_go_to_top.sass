@@ -1,0 +1,44 @@
+#index
+    #go-to-top
+        position: fixed
+        bottom: -48px
+        right: 48px
+        z-index: 50
+        transition: bottom .3s cubic-bezier(0.7, 0, 0.2, 1), right .3s cubic-bezier(0.7, 0, 0.2, 1)
+
+        &.visible
+            bottom: 48px
+
+        .btn
+            width: 48px
+            height: 48px
+            background-color: #fff
+            border-radius: 50%
+            box-shadow: #0004 0px 2px 8px 0px
+            cursor: pointer
+            position: relative
+            transition: transform .2s ease-out
+
+            &:hover
+                transform: translateY(-2px)
+
+            &::before
+                width: 8px
+                height: 8px
+                position: absolute
+                content: ''
+                display: block
+                left: calc(50% - 5px)
+                top: calc(50% - 4px)
+                border-top: solid 2px black
+                border-right: solid 2px black
+                transform: rotate(-45deg)
+
+@include responsive-max(480px)
+    #index
+        #go-to-top
+            bottom: -32px
+            right: 32px
+
+            &.visible
+                bottom: 32px
