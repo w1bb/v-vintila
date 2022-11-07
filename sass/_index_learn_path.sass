@@ -111,7 +111,7 @@
                             flex-grow: 1
 
                             div
-                                text-align: justify
+                                // text-align: justify
                                 line-height: 1.25
                                 font-weight: 300
                                 font-size: 16px
@@ -127,6 +127,7 @@
                     @include flexSet(space-between, flex-start)
 
                     .one-award
+                        letter-spacing: -0.2px
 
                         .award-section-title
                             text-transform: uppercase
@@ -137,6 +138,7 @@
                         .awards
                             width: 100%
                             padding: 24px 0 0
+                            box-sizing: border-box
 
                             .award
                                 width: 100%
@@ -147,6 +149,7 @@
                                 flex-direction: column
                                 padding-left: 12px
                                 padding-bottom: 12px
+                                box-sizing: border-box
 
                                 .name
                                     font-weight: 600
@@ -163,3 +166,134 @@
                                         border-right: solid 2px black
                                         transform: rotate(45deg)
                                         top: 2px
+
+@include responsive-max(1380px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                width: 1060px
+
+@include responsive-max(1260px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                width: 880px
+                .all-awards
+                    justify-content: center
+                    flex-wrap: wrap
+                    .one-award
+                        flex-shrink: 0
+                        flex-grow: 0
+                        width: 50%
+                        .awards
+                            .award
+                                padding-left: 0
+                                .award
+                                    padding-left: 0
+                                    .name
+                                        &::before
+                                            display: none
+
+                        &.right
+                            .award-section-title
+                                text-align: right
+                            .awards
+                                .award
+                                    @include flexSet(flex-end, flex-end)
+                                    flex-direction: row
+                                    flex-wrap: wrap
+                                    .award
+                                        flex-direction: column
+                                        width: 50%
+                        &.center
+                            width: 100%
+                            .award-section-title
+                                text-align: center
+                            .awards
+                                .award
+                                    @include flexSet(space-between, flex-start)
+                                    flex-direction: row
+                                    .award
+                                        flex-direction: column
+                                        width: 24%
+
+@include responsive-max(1040px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                width: 84.6154%
+                .all-awards
+                    .one-award
+                        .awards
+                            .award
+                                .award
+                                    padding-bottom: 16px
+                        &.center
+                            width: 65%
+                            .award-section-title
+                                text-align: center
+                            .awards
+                                .award
+                                    @include flexSet(center, flex-start)
+                                    flex-direction: row
+                                    flex-wrap: wrap
+                                    &:nth-child(2n + 0)
+                                        align-items: flex-end
+                                        text-align: right
+                                    .award
+                                        flex-direction: column
+                                        width: 50%
+
+@include responsive-max(820px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                width: 80%
+                .all-awards
+                    .one-award
+                        &.center
+                            width: 100%
+
+@include responsive-max(720px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                width: 84.6154%
+                .all-awards
+                    .one-award
+                        .award-section-title
+                            font-size: 24px
+                        .awards
+                            padding-top: 16px
+                            padding-bottom: 4px
+                            .award
+                                .award
+                                    letter-spacing: -0.8px
+                                    .name
+                                        font-size: 18px
+                                        padding-bottom: 2px
+                        &.left
+                            width: 100%
+                        &.right
+                            width: 100%
+                            .award-section-title
+                                text-align: left
+                            .awards
+                                .award
+                                    justify-content: flex-start
+                                    align-items: flex-start
+                                    .award
+                                        justify-content: flex-start
+                                        align-items: flex-start
+                        &.center
+                            width: 100%
+                            .award-section-title
+                                text-align: left
+                            .awards
+                                .award
+                                    justify-content: flex-start
+                                    align-items: flex-start
+                                    .award
+                                        justify-content: flex-start
+                                        align-items: flex-start
+                                        text-align: left
