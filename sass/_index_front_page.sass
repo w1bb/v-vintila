@@ -1,0 +1,121 @@
+#index
+    #index-content
+        #front-page
+            height: 100vh
+            width: 100%
+            position: relative
+            overflow: hidden
+            @include flexSet(center, flex-start)
+
+            // #front-page-img
+            //     height: 100%
+            //     width: 100%
+            //     background-image: url("../img/1667037250540.png")
+            //     background-size: contain
+            //     background-repeat: no-repeat
+            //     background-position-x: 0%
+            //     filter: grayscale(1) contrast(1.3)
+            //     transform: scale(1.3)
+            //     transition: transform 1.5s, filter 0.8s ease-in-out 1s
+            //     width: 100%
+                
+            //     &.loaded
+            //         transform: scale(1)
+            //         filter: grayscale(0) contrast(1)
+
+            .front-page-social-wrapper
+                position: absolute
+                bottom: 0
+                left: 0
+                background-image: linear-gradient(45deg, #7b4397, #dc2430)
+                @include flexSet(space-between, stretch)
+
+                a
+                    @include flexSet(center, center)
+                    width: 72px
+                    height: 72px
+                    background-color: #000
+                    transition: all .25s ease-out
+                    flex-shrink: 0
+                    flex-grow: 0
+
+                    &:hover
+                        background-color: #0000
+
+                    svg
+                        width: 22px
+                        height: 22px
+
+                        &.github
+                            padding-top: 2px
+
+            .front-page-name-wrapper
+                position: absolute
+                height: 158px
+                top: calc(50% - 74px)
+
+                .front-page-name
+                    position: relative
+                    width: 100%
+                    height: 120px
+                    @include flexSet(space-between, stretch)
+                    background-image: linear-gradient(45deg, #C33764, #FF8235)
+
+                    .img-wrapper
+                        width: 120px
+                        height: 120px
+                        background-color: #000
+                        flex-shrink: 0
+                        flex-grow: 0
+                    
+                    .name-wrapper
+                        padding: 0 28px
+                        @include flexSet(center, center)
+
+                        .name
+                            color: #000
+                            line-height: 1
+                            font-weight: 600
+                            font-size: 48px
+                            
+                    .position-wrapper
+                        width: 100%
+                        position: absolute
+                        top: -25px
+                        @include flexSet(flex-end, center)
+                        line-height: 1
+                        font-weight: 800
+                        font-size: 14px
+                        text-transform: uppercase
+                        
+                        // .position
+                            
+                    
+                    .marquee-wrapper
+                        width: 100%
+                        height: 25px
+                        position: absolute
+                        left: 0
+                        bottom: -38px
+                        font-size: 16px
+
+                        .marquee
+                            width: 100%
+                            height: 100%
+                            overflow: hidden
+                            position: relative
+
+                            div
+                                display: block
+                                width: 220%
+                                height: 100%
+                                line-height: 1
+                                position: absolute
+                                overflow: hidden
+                                animation: marquee 16s linear infinite
+
+                                span
+                                    float: left
+                                    width: 50%
+
+// @include responsive-max(550px)

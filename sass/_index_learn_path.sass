@@ -1,0 +1,165 @@
+#index
+    #index-content
+        #learn-path
+            background: #f5f4f8
+            width: 100%
+            padding: 64px 0 48px 0
+            @include flexSet(center, flex-start)
+            border-top: solid 4px #000
+            // border-bottom: solid 4px #000
+
+            .learn-path-content
+                width: 1180px
+                @include flexSet(flex-start, center)
+                flex-direction: column
+
+                .title
+                    text-align: center
+                    font-size: 32px
+                    position: relative
+                    text-transform: uppercase
+                    display: block
+                    font-weight: 700
+
+                    &::before
+                        display: block
+                        content: ''
+                        position: absolute
+                        width: 80px
+                        height: 6px
+                        background-color: #000
+                        top: 15px
+                        left: -128px
+                        line-height: 1
+                        border-radius: 5px
+
+                    &::after
+                        display: block
+                        content: ''
+                        position: absolute
+                        width: 80px
+                        height: 6px
+                        background-color: #000
+                        right: -128px
+                        top: 15px
+                        line-height: 1
+                        border-radius: 5px
+                
+                .items
+                    width: 100%
+                    padding: 48px 0 38px
+                    position: relative
+
+                    &::before
+                        display: block
+                        content: ''
+                        width: 1px
+                        top: 52px
+                        bottom: 0
+                        left: 11px
+                        background: black
+                        position: absolute
+
+                    .item
+                        font-size: 16px
+                        font-family: "Courier-Prime"
+                        position: relative
+                        width: 100%
+                        @include flexSet(center, flex-start)
+
+                        .time
+                            width: 150px
+                            padding-left: 32px
+                            flex-shrink: 0
+                            letter-spacing: -0.5px
+                            font-weight: 600
+                            line-height: 1.25
+
+                            &::before
+                                display: block
+                                content: ''
+                                position: absolute
+                                
+                                background-color: white
+                                width: 8px
+                                height: 8px
+                                border: 2px solid #000
+                                border-radius: 50%
+                                top: 3px
+                                left: 6px
+                                z-index: 2
+                            
+                            &.start::before
+                                background-color: #faaca8
+                    
+                            &.end::after
+                                display: block
+                                content: ''
+                                position: absolute
+
+                                width: 5px
+                                top: 10px
+                                left: 9px
+                                background: #f5f4f8
+                                bottom: -38px
+                                z-index: 1
+                        
+                        .details
+                            @include flexSet(center, flex-start)
+                            font-family: "Courier-Prime"
+                            flex-direction: column
+                            flex-grow: 1
+
+                            div
+                                text-align: justify
+                                line-height: 1.25
+                                font-weight: 300
+                                font-size: 16px
+                                letter-spacing: -0.5px
+                                padding-bottom: 8px
+
+                                b
+                                    display: inline
+                                    font-weight: 600
+                
+                .all-awards
+                    width: 100%
+                    @include flexSet(space-between, flex-start)
+
+                    .one-award
+
+                        .award-section-title
+                            text-transform: uppercase
+                            display: block
+                            font-weight: 700
+                            width: 100%
+                        
+                        .awards
+                            width: 100%
+                            padding: 24px 0 0
+
+                            .award
+                                width: 100%
+                                font-size: 16px
+                                font-family: "Courier-Prime"
+                                position: relative
+                                @include flexSet(center, flex-start)
+                                flex-direction: column
+                                padding-left: 12px
+                                padding-bottom: 12px
+
+                                .name
+                                    font-weight: 600
+                                    line-height: 1
+
+                                    &::before
+                                        display: block
+                                        content: ''
+                                        position: absolute
+                                        left: -12px
+                                        width: 8px
+                                        height: 8px
+                                        border-top: solid 2px black
+                                        border-right: solid 2px black
+                                        transform: rotate(45deg)
+                                        top: 2px
