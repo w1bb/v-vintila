@@ -1305,9 +1305,6 @@ body {
   #index #index-content #skills .skills-content .select-skills .selection-list {
     padding-top: 18px;
   }
-  #index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
-    font-size: 20px;
-  }
   #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice {
     padding: 8px 20px;
   }
@@ -1322,13 +1319,13 @@ body {
 }
 @media screen and (max-width: 400px) {
   #index #index-content #skills .skills-content .title {
-    font-size: 28px;
+    font-size: 30px;
   }
   #index #index-content #skills .skills-content .select-skills .selection-list {
     padding-top: 18px;
   }
   #index #index-content #skills .skills-content .select-skills .selection-list .subtitle {
-    font-size: 18px;
+    font-size: 22px;
   }
   #index #index-content #skills .skills-content .select-skills .selection-list .choices {
     padding-top: 10px;
@@ -1340,7 +1337,7 @@ body {
     font-size: 16px;
   }
   #index #index-content #skills .skills-content .select-skills .selection-list .choices .choice .choice-description {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 @media screen and (max-width: 350px) {
@@ -1514,9 +1511,6 @@ body {
     left: calc(100% + 28px);
     right: auto;
     width: 50vw;
-  }
-  #index #index-content #get-in-touch .get-in-touch-content .description {
-    font-size: 14px;
   }
 }
 #index #index-content #projects {
