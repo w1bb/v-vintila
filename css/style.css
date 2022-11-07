@@ -512,6 +512,7 @@ body {
 }
 
 #index #index-content #learn-path {
+  overflow: hidden;
   background: #f5f4f8;
   width: 100%;
   padding: 64px 0 48px 0;
@@ -831,6 +832,100 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
+  }
+}
+@media screen and (max-width: 698px) {
+  #index #index-content #learn-path .learn-path-content .title::before {
+    right: calc(100% + 48px);
+    left: auto;
+    width: 50vw;
+  }
+  #index #index-content #learn-path .learn-path-content .title::after {
+    left: calc(100% + 48px);
+    right: auto;
+    width: 50vw;
+  }
+  #index #index-content #learn-path .learn-path-content .items {
+    padding-bottom: 42px;
+  }
+  #index #index-content #learn-path .learn-path-content .items .item .time {
+    font-size: 16px;
+    letter-spacing: -0.8px;
+  }
+  #index #index-content #learn-path .learn-path-content .items .item .time.end::after {
+    bottom: -42px;
+  }
+}
+@media screen and (max-width: 650px) {
+  #index #index-content #learn-path .learn-path-content .items {
+    padding-bottom: 16px;
+  }
+  #index #index-content #learn-path .learn-path-content .items .item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  #index #index-content #learn-path .learn-path-content .items .item .time {
+    font-size: 20px;
+    width: 100%;
+    line-height: 1;
+  }
+  #index #index-content #learn-path .learn-path-content .items .item .time.end::after {
+    bottom: -16px;
+  }
+  #index #index-content #learn-path .learn-path-content .items .item .details {
+    box-sizing: border-box;
+    padding-top: 16px;
+    padding-left: 54px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (max-width: 580px) {
+  #index #index-content #learn-path .learn-path-content .title {
+    font-size: 28px;
+  }
+  #index #index-content #learn-path .learn-path-content .title::before {
+    top: 13px;
+  }
+  #index #index-content #learn-path .learn-path-content .title::after {
+    top: 13px;
+  }
+}
+@media screen and (max-width: 460px) {
+  #index #index-content #learn-path .learn-path-content .all-awards .one-award .awards .award .award {
+    max-width: 250px;
+  }
+}
+@media screen and (max-width: 440px) {
+  #index #index-content #learn-path .learn-path-content .all-awards .one-award .award-section-title {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #index #index-content #learn-path {
+    padding: 48px 0 32px;
+  }
+  #index #index-content #learn-path .learn-path-content .title::before {
+    right: calc(100% + 28px);
+    left: auto;
+    width: 50vw;
+  }
+  #index #index-content #learn-path .learn-path-content .title::after {
+    left: calc(100% + 28px);
+    right: auto;
+    width: 50vw;
+  }
+  #index #index-content #learn-path .learn-path-content .items .item .details div {
+    line-height: 1.2;
+  }
+}
+@media screen and (max-width: 380px) {
+  #index #index-content #learn-path .learn-path-content .all-awards .one-award.center .awards .award {
+    flex-wrap: wrap;
+  }
+  #index #index-content #learn-path .learn-path-content .all-awards .one-award.center .awards .award .award {
+    width: 100%;
   }
 }
 #index #index-content #other-projects {
@@ -1735,6 +1830,15 @@ body {
   }
 }
 @media screen and (max-width: 840px) {
+  #index #index-content #projects {
+    padding-top: 0;
+  }
+  #index #index-content #projects .projects-content .title {
+    display: none;
+  }
+  #index #index-content #projects .projects-content .content {
+    margin-top: 0;
+  }
   #index #index-content #projects .projects-content .content .project {
     overflow: hidden;
   }
@@ -1832,7 +1936,6 @@ body {
   }
   #index #index-content #projects .projects-content .content {
     background: #fff;
-    margin-top: 36px;
   }
   #index #index-content #projects .projects-content .content .project .links {
     display: none !important;
@@ -1854,14 +1957,6 @@ body {
   }
   #index #index-content #projects .projects-content .content .project:hover .text {
     padding: 48px 40px;
-  }
-}
-@media screen and (max-width: 420px) {
-  #index #index-content #projects .projects-content .title {
-    font-size: 24px;
-  }
-  #index #index-content #projects .projects-content .content {
-    margin-top: 28px;
   }
 }
 @media screen and (max-width: 380px) {

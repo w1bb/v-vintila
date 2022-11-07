@@ -286,8 +286,12 @@
 @include responsive-max(840px)
     #index #index-content
         #projects
+            padding-top: 0
             .projects-content
+                .title
+                    display: none
                 .content
+                    margin-top: 0
                     .project
                         overflow: hidden
                         .text
@@ -393,7 +397,6 @@
                     font-size: 28px
                 .content
                     background: #fff
-                    margin-top: 36px
                     .project
                         .links
                             display: none !important
@@ -418,14 +421,14 @@
                             .text
                                 padding: 48px 40px
 
-@include responsive-max(420px)
-    #index #index-content
-        #projects
-            .projects-content
-                .title
-                    font-size: 24px
-                .content
-                    margin-top: 28px
+// @include responsive-max(420px)
+//     #index #index-content
+//         #projects
+//             .projects-content
+//                 .title
+//                     font-size: 24px
+//                 .content
+//                     margin-top: 28px
 
 @include responsive-max(380px)
     #index #index-content

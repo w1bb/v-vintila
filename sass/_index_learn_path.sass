@@ -1,6 +1,7 @@
 #index
     #index-content
         #learn-path
+            overflow: hidden
             background: #f5f4f8
             width: 100%
             padding: 64px 0 48px 0
@@ -297,3 +298,108 @@
                                         justify-content: flex-start
                                         align-items: flex-start
                                         text-align: left
+
+@include responsive-max(698px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                .title
+                    &::before
+                        right: calc(100% + 48px)
+                        left: auto
+                        width: 50vw
+                    &::after
+                        left: calc(100% + 48px)
+                        right: auto
+                        width: 50vw
+                .items
+                    padding-bottom: 42px
+                    .item
+                        .time
+                            font-size: 16px
+                            letter-spacing: -0.8px
+                            &.end::after
+                                bottom: -42px
+
+@include responsive-max(650px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                .items
+                    padding-bottom: 16px
+                    .item
+                        @include flexSet(flex-start, flex-start)
+                        flex-direction: column
+                        .time
+                            font-size: 20px
+                            width: 100%
+                            line-height: 1
+                            &.end::after
+                                bottom: -16px
+                        .details
+                            box-sizing: border-box
+                            padding-top: 16px
+                            padding-left: 54px
+                            padding-bottom: 16px
+
+@include responsive-max(580px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                .title
+                    font-size: 28px
+                    &::before
+                        top: 13px
+                    &::after
+                        top: 13px
+
+@include responsive-max(460px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                .all-awards
+                    .one-award
+                        .awards
+                            .award
+                                .award
+                                    max-width: 250px
+
+@include responsive-max(440px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                .all-awards
+                    .one-award
+                        .award-section-title
+                            font-size: 22px
+
+@include responsive-max(400px)
+    #index #index-content
+        #learn-path
+            padding: 48px 0 32px
+            .learn-path-content
+                .title
+                    &::before
+                        right: calc(100% + 28px)
+                        left: auto
+                        width: 50vw
+                    &::after
+                        left: calc(100% + 28px)
+                        right: auto
+                        width: 50vw
+                .items
+                    .item
+                        .details div
+                            line-height: 1.2
+
+@include responsive-max(380px)
+    #index #index-content
+        #learn-path
+            .learn-path-content
+                .all-awards
+                    .one-award.center
+                        .awards
+                            .award
+                                flex-wrap: wrap
+                                .award
+                                    width: 100%
