@@ -935,6 +935,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   background-color: #fff;
+  overflow: hidden;
 }
 #index #index-content #other-projects .projects-content {
   width: 1020px;
@@ -1137,6 +1138,7 @@ body {
 #index #index-content #skills {
   width: 100%;
   background-color: #f5f4f8;
+  overflow: hidden;
   background-image: linear-gradient(30deg, #FEAC5E, #C779D0);
   display: flex;
   justify-content: center;
@@ -1349,6 +1351,7 @@ body {
   }
 }
 #index #index-content #get-in-touch {
+  overflow: hidden;
   width: 100%;
   padding: 88px 0 64px;
   display: flex;
@@ -1517,6 +1520,7 @@ body {
   }
 }
 #index #index-content #projects {
+  overflow: hidden;
   padding: 64px 0 0;
   width: 100%;
   display: flex;
@@ -1705,8 +1709,7 @@ body {
     transform-origin: center !important;
   }
   #index #index-content #projects .projects-content .content .project .text {
-    background: rgba(0, 0, 0, 0.2666666667);
-    backdrop-filter: blur(16px);
+    background: rgba(0, 0, 0, 0.5333333333);
     width: 480px;
     padding: 0 48px;
     transition: padding 0.3s cubic-bezier(0.7, 0, 0.2, 1);
@@ -1845,8 +1848,8 @@ body {
     box-sizing: border-box;
     padding: 72px 160px;
     margin: 8px 16px;
-    backdrop-filter: blur(8px);
-    transition: background-color 0.3s cubic-bezier(0.7, 0, 0.2, 1), backdrop-filter 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    transition: background-color 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+    z-index: 1;
   }
   #index #index-content #projects .projects-content .content .project .img {
     position: absolute;
@@ -1856,13 +1859,13 @@ body {
     right: 0;
     width: auto;
     height: auto;
+    z-index: 0;
     padding: 0;
     transition: top 0.3s cubic-bezier(0.7, 0, 0.2, 1), left 0.3s cubic-bezier(0.7, 0, 0.2, 1), bottom 0.3s cubic-bezier(0.7, 0, 0.2, 1), right 0.3s cubic-bezier(0.7, 0, 0.2, 1);
   }
   #index #index-content #projects .projects-content .content .project:hover .text {
     padding: 72px 160px;
     background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(12px);
   }
 }
 @media screen and (max-width: 780px) {
