@@ -1452,6 +1452,9 @@ body {
   }
 }
 @media screen and (max-width: 698px) {
+  #index #index-content #get-in-touch {
+    padding: 54px 0;
+  }
   #index #index-content #get-in-touch .get-in-touch-content {
     overflow-x: hidden;
     width: 100%;
@@ -1500,7 +1503,7 @@ body {
 }
 @media screen and (max-width: 400px) {
   #index #index-content #get-in-touch {
-    padding: 72px 0;
+    padding: 54px 0 32px;
   }
   #index #index-content #get-in-touch .get-in-touch-content .title::before {
     right: calc(100% + 28px);
