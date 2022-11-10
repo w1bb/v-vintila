@@ -9,7 +9,7 @@
         @include flexSet(flex-end, center)
         box-sizing: border-box
         padding: 20px 24px 20px 24px
-        background: #fff8
+        background: #0008
         backdrop-filter: blur(12px)
         transition: all .3s cubic-bezier(0.7, 0, 0.2, 1)
 
@@ -21,10 +21,16 @@
                 width: calc(7px * 6)
                 height: calc(5px * 6)
                 display: block
-                background-image: url("../img/logos/wi-black.svg")
-                background-size: cover
-                background-repeat: no-repeat
-                background-position: center
+                // background-image: url("../img/logos/wi-black.svg")
+                // background-size: cover
+                // background-repeat: no-repeat
+                // background-position: center
+
+                svg
+                    width: calc(7px * 6)
+                    height: calc(5px * 6)
+                    fill: #b6a6d3
+                    transition: fill .3s cubic-bezier(0.7, 0, 0.2, 1)
 
         .real-options
             @include flexSet(flex-start, center)
@@ -36,8 +42,9 @@
                 content: ''
                 height: 24px
                 width: 1px
-                background-color: #000
+                background-color: #eee
                 margin: 0 12px
+                transition: background-color .3s cubic-bezier(0.7, 0, 0.2, 1)
 
             #text-options
                 @include flexSet(flex-start, center)
@@ -51,11 +58,13 @@
                     svg
                         width: 16px
                         height: 16px
+                        stroke: #eee
+                        transition: stroke .3s cubic-bezier(0.7, 0, 0.2, 1)
 
                         &.github
                             margin-top: 2px
                 .text
-                    color: #000
+                    color: #eee
                     text-decoration: none
                     font-family: "Courier-Prime"
                     font-size: 16px
@@ -64,6 +73,7 @@
                     letter-spacing: -0.1px
                     position: relative
                     box-sizing: border-box
+                    transition: color .3s cubic-bezier(0.7, 0, 0.2, 1)
                     padding: 12px
                     
                     &::before
@@ -71,7 +81,7 @@
                         content: ''
                         position: absolute
                         height: 2px
-                        background-color: #000
+                        background-color: #eee
                         bottom: calc(-2px + 12px)
                         left: 12px
                         right: 12px
@@ -112,10 +122,10 @@
                     left: 0
                     width: 100%
                     height: 100%
-                    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1)
+                    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.7, 0, 0.2, 1)
                     transform-origin: 100% 50%
                     box-sizing: border-box
-                    background: #fff
+                    background-color: #b6a6d3
 
                 &:hover::before
                     transform: scale3d(0,1,1)
@@ -136,6 +146,26 @@
             background: #fff
             box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px
 
+            .logo
+                a
+                    svg
+                        fill: #000
+
+            .real-options
+                .separator
+                    background-color: #000
+                .option
+                    .text
+                        color: #000
+                        &::before
+                            background-color: #000
+                    .img
+                        svg
+                            stroke: #000
+            .download-resume
+                a
+                    &::before
+                        background-color: #fff
             // .download-resume
                 // padding-left: 8px
 
