@@ -116,7 +116,7 @@ function article_content(content_of) {
                     <li>Multithreading support;</li>\
                     <li>A faster evaluation algorithm.</li>\
                 </ul>\
-                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>For more info, please check out the <a href=\"https://github.com/w1bb/WICE\">code repository</a>. The code is made available under the <a href=\"https://github.com/w1bb/WICE/blob/master/LICENSE\">MIT license</a>.</p>\
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
@@ -172,7 +172,7 @@ function article_content(content_of) {
                 <p>There are some other metrics that were used, but all in all, this is the algorithm. In the end, it also checks if there are duplicate emails inputed, since these are most likely SPAM. If an email is considered a PHAM or an SHAM, its score will be reevaluated to make sure it isn't actually a SPAM.</p>\
                 <p>The algorithm was written in <b>C</b> and it was <b>tested</b> using some custom made tests as well. The code is <b>very well documented</b>.</p>\
                 <p>Note: the original challenge also contained some other task, but that one was trivial and it was only used to filter those who wanted to win an award from those who weren't all that interested.</p>\
-                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>For more info, please check out the <a href=\"https://github.com/w1bb/N-AI-Spam\">code repository</a>. The code is made available under the <a href=\"https://github.com/w1bb/N-AI-Spam/blob/master/LICENSE\">MIT license</a>.</p>\
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
@@ -210,7 +210,7 @@ function article_content(content_of) {
                     <li>The <a href=\"https://fonts.google.com/specimen/Inter/about\">Inter</a> font;</li>\
                     <li>The <a href=\"https://fonts.google.com/specimen/Courier+Prime/about\">Courier Prime</a> font.</li>\
                 </ul>\
-                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>For more info, please check out the <a href=\"https://github.com/w1bb/v-vintila\">code repository</a>. The code is made available under the <a href=\"https://github.com/w1bb/v-vintila/blob/master/LICENSE\">MIT license</a>.</p>\
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
@@ -234,7 +234,7 @@ function article_content(content_of) {
                 <p>We were tasked to design an AI in 24 hours that could answer basic trivia questions, such as 'Who is the first person to walk on the moon?' or 'When was Albert Einstein born?'. These queries were recieved by a local server that would process them and return an answer.</p>\
                 <p>Together with <b>Vlad Negoiță</b>, our team designed a <b>Python</b> script capable of answering some of these questions, but the project was far from perfect. However, the code found here is <b>open&#8209;source</b> and, most importantly, <b>written in only 12 hours</b> (there were some communication problems on our side, so we had to develop our bot in half the normal time).</p>\
                 <p>There are many issues with this code, but I will not solve any of them; the code ran its course, since it was meant to be used in the competition and nowhere else. In the future, I might recreate this AI alone.</p>\
-                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>For more info, please check out the <a href=\"https://github.com/w1bb/Hazoses-Trivia-Bot\">code repository</a>. The code is made available under the <a href=\"https://github.com/w1bb/Hazoses-Trivia-Bot/blob/master/LICENSE\">MIT license</a>.</p>\
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
