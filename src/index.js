@@ -143,7 +143,7 @@ function article_content(content_of) {
                     <li>The book he recommends is also a great read, <a href=\"https://www.amazon.com/Understanding-Cryptography-Textbook-Students-Practitioners/dp/3642446493\">Understanding Cryptography: A Textbook for Students and Practitioners</a>, by Christof Paar and Jan Pelzi;</li>\
                     <li>Wikipedia also talks about <a href=\"https://en.wikipedia.org/wiki/Advanced_Encryption_Standard\">AES</a> and links to various important pieces of information that were used in the algorithm.</li>\
                 </ul>\
-                <p>For more info, please check out the <a href=\"#\">code repository</a>. The code is made available under the <a href=\"#\">? license</a>.</p>\
+                <p>For more info, please check out the <a href=\"https://github.com/w1bb/Wi-Crypt\">code repository</a>. The code is made available under the <a href=\"https://github.com/w1bb/Wi-Crypt/blob/master/LICENSE\">MIT license</a>.</p>\
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
