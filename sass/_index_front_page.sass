@@ -51,7 +51,7 @@
                     width: 72px
                     height: 72px
                     background-color: #000
-                    transition: all .25s ease-out
+                    transition: background-color .25s ease-out
                     flex-shrink: 0
                     flex-grow: 0
 
@@ -93,6 +93,8 @@
                             line-height: 1
                             font-weight: 600
                             font-size: 48px
+                        .other-name
+                            display: none
                             
                     .position-wrapper
                         width: 100%
@@ -134,4 +136,62 @@
                                     float: left
                                     width: 50%
 
-// @include responsive-max(550px)
+@include responsive-max(780px)
+    #index #index-content
+        #front-page
+            .front-page-name-wrapper
+                .front-page-name
+                    height: 96px
+                    .img-wrapper
+                        width: 96px
+                        height: 96px
+                    .name-wrapper
+                        .name
+                            font-size: 42px
+                    .marquee-wrapper
+                        .marquee
+                            div
+                                width: 250%
+                                animation: marquee-780 16s linear infinite
+                                
+@include responsive-max(620px)
+    #index #index-content
+        #front-page
+            .front-page-name-wrapper
+                .front-page-name
+                    height: 112px
+                    .img-wrapper
+                        width: 112px
+                        height: 112px
+                    height: 112px
+                    .name-wrapper
+                        padding-left: 24px
+                        padding-right: 24px
+                        .name
+                            font-size: 36px
+                            line-height: 1.1
+                            // max-width: 184px
+                            text-align: right
+
+@include responsive-max(520px)
+    #index #index-content
+        #front-page
+            .front-page-name-wrapper
+                width: calc(100% - 24px)
+                .front-page-name
+                    .name-wrapper
+                        width: 100%
+                        box-sizing: border-box
+                        .name
+                            display: none
+                        .other-name
+                            display: block
+                            font-size: 42px
+
+@include responsive-max(450px)
+    #index #index-content
+        #front-page
+            .front-page-social-wrapper
+                width: 100%
+                a
+                    width: 25%
