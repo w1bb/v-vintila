@@ -1,0 +1,21 @@
+#loading
+    position: fixed
+    z-index: 100000
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: #000
+    @include flexSet(center, center)
+    transition: opacity .8s cubic-bezier(0.7, 0, 0.2, 1), visibility .8s cubic-bezier(0.7, 0, 0.2, 1), display .8s ease .1s
+    visibility: visible
+
+    .text
+        color: #fff
+        @include fontSet("Inter", 400, 9vw)
+        line-height: 1
+
+    &.loaded
+        opacity: 0
+        visibility: hidden
+

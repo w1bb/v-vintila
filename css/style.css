@@ -112,6 +112,32 @@ body {
   background-color: #fff;
 }
 
+#loading {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s cubic-bezier(0.7, 0, 0.2, 1), visibility 0.8s cubic-bezier(0.7, 0, 0.2, 1), display 0.8s ease 0.1s;
+  visibility: visible;
+}
+#loading .text {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 9vw;
+  line-height: 1;
+}
+#loading.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 #index #index-nav-top {
   width: 100%;
   position: fixed;

@@ -27,6 +27,7 @@ function go_to_top() {
 $(document).ready(function(){
     indexNavbarOnScroll();
 
+    $("#loading").addClass("loaded");
     let h = window.location.hash.toLowerCase();
     if (h === '#wi-crypt') {
         article_content("proj-WI-CRYPT");
