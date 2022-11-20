@@ -140,7 +140,7 @@ body {
 #index #index-nav-top .logo a svg {
   width: 42px;
   height: 30px;
-  fill: #b6a6d3;
+  fill: #ac95d6;
   transition: fill 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 #index #index-nav-top .real-options {
@@ -238,7 +238,7 @@ body {
   transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.7, 0, 0.2, 1);
   transform-origin: 100% 50%;
   box-sizing: border-box;
-  background-color: #b6a6d3;
+  background-color: #ac95d6;
 }
 #index #index-nav-top .download-resume a:hover::before {
   transform: scale3d(0, 1, 1);
@@ -350,11 +350,15 @@ body {
     flex-grow: 0;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: #eee;
+    transition: background-color 0.3s cubic-bezier(0.7, 0, 0.2, 1);
     border-radius: 2px;
   }
   #index #index-nav-top.scrolled .download-resume {
     padding-left: 16px;
+  }
+  #index #index-nav-top.scrolled #burger-menu-icon .line {
+    background-color: #000;
   }
 }
 @media screen and (max-width: 500px) {
@@ -451,12 +455,7 @@ body {
 #index #index-content #front-page #front-page-img {
   height: 100%;
   width: 100%;
-  backgroud: red;
-  background-image: url("../img/pexels-eberhard-grossgasteiger-1097491.jpg");
-  background-size: 1920px;
-  background-repeat: no-repeat;
-  background-position-y: 23%;
-  background-position-x: center;
+  background: radial-gradient(circle closest-corner at center 50%, #222, black 60%) no-repeat;
 }
 #index #index-content #front-page #front-page-img .over-filter {
   width: 100%;
@@ -466,7 +465,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(45deg, #7b4397, #dc2430);
+  background-image: linear-gradient(45deg, #7330f0, #7b4397, #7330f0);
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -504,12 +503,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  background-color: rgba(0, 0, 0, 0.2666666667);
+  background-color: #000;
 }
 #index #index-content #front-page .front-page-name-wrapper .front-page-name .img-wrapper {
   width: 120px;
   height: 120px;
-  background-color: #000;
+  background-color: #ac95d6;
+  background-image: url("../img/icons/icons8-support-64.png");
+  background-repeat: no-repeat;
+  background-position: center;
   flex-shrink: 0;
   flex-grow: 0;
 }
@@ -520,9 +522,9 @@ body {
   align-items: center;
 }
 #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper .name {
-  color: #000;
+  color: #ac95d6;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 48px;
 }
 #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper .other-name {
@@ -536,9 +538,10 @@ body {
   justify-content: flex-end;
   align-items: center;
   line-height: 1;
-  font-weight: 800;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
+  color: #eee;
 }
 #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper {
   width: 100%;
@@ -553,6 +556,8 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
+  color: #fff;
+  font-weight: 400;
 }
 #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div {
   display: block;
@@ -567,31 +572,18 @@ body {
   float: left;
   width: 50%;
 }
-
-@media screen and (max-width: 780px) {
-  #index #index-content #front-page .front-page-name-wrapper .front-page-name {
-    height: 96px;
-  }
-  #index #index-content #front-page .front-page-name-wrapper .front-page-name .img-wrapper {
-    width: 96px;
-    height: 96px;
-  }
-  #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper .name {
-    font-size: 42px;
-  }
-  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div {
-    width: 250%;
-    animation: marquee-780 16s linear infinite;
-  }
+#index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div span b {
+  color: #cdb8f5;
 }
-@media screen and (max-width: 620px) {
+
+@media screen and (max-width: 680px) {
   #index #index-content #front-page .front-page-name-wrapper .front-page-name {
-    height: 112px;
     height: 112px;
   }
   #index #index-content #front-page .front-page-name-wrapper .front-page-name .img-wrapper {
     width: 112px;
     height: 112px;
+    background-size: 64px;
   }
   #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper {
     padding-left: 24px;
@@ -602,10 +594,14 @@ body {
     line-height: 1.1;
     text-align: right;
   }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div {
+    width: 250%;
+    animation: marquee-780 16s linear infinite;
+  }
 }
 @media screen and (max-width: 520px) {
   #index #index-content #front-page .front-page-name-wrapper {
-    width: calc(100% - 24px);
+    width: calc(100% - 32px);
   }
   #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper {
     width: 100%;
@@ -617,14 +613,89 @@ body {
   #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper .other-name {
     display: block;
     font-size: 42px;
+    color: #ac95d6;
+    font-weight: 400;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper {
+    bottom: -64px;
+    height: auto;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee {
+    position: static;
+    height: auto;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div {
+    position: static;
+    animation: none;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 24px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div span.first {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div span.first b {
+    color: #eee;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div span.second {
+    display: none;
   }
 }
 @media screen and (max-width: 450px) {
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper .other-name {
+    font-size: 38px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper {
+    bottom: -54px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee {
+    font-size: 14px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div {
+    padding: 0 12px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .position-wrapper .position {
+    font-size: 13px;
+  }
   #index #index-content #front-page .front-page-social-wrapper {
     width: 100%;
   }
   #index #index-content #front-page .front-page-social-wrapper a {
     width: 25%;
+  }
+}
+@media screen and (max-width: 400px) {
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper .other-name {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 380px) {
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name {
+    height: 100px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .img-wrapper {
+    height: 100px;
+    width: 100px;
+    background-size: 48px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .name-wrapper .other-name {
+    font-size: 30px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .marquee-wrapper .marquee div {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name {
+    height: 90px;
+  }
+  #index #index-content #front-page .front-page-name-wrapper .front-page-name .img-wrapper {
+    height: 90px;
+    width: 90px;
   }
 }
 #index #index-content #learn-path {

@@ -29,7 +29,7 @@
                 svg
                     width: calc(7px * 6)
                     height: calc(5px * 6)
-                    fill: #b6a6d3
+                    fill: #ac95d6
                     transition: fill .3s cubic-bezier(0.7, 0, 0.2, 1)
 
         .real-options
@@ -125,7 +125,7 @@
                     transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.7, 0, 0.2, 1)
                     transform-origin: 100% 50%
                     box-sizing: border-box
-                    background-color: #b6a6d3
+                    background-color: #ac95d6
 
                 &:hover::before
                     transform: scale3d(0,1,1)
@@ -232,13 +232,17 @@
                 flex-grow: 0
                 width: 100%
                 height: 2px
-                background-color: #000
+                background-color: #eee
+                transition: background-color .3s cubic-bezier(0.7, 0, 0.2, 1)
                 border-radius: 2px
         
         &.scrolled
             // padding-right: 16px
             .download-resume
                 padding-left: 16px
+            #burger-menu-icon
+                .line
+                    background-color: #000
 
 @include responsive-max(500px)
     #index #index-nav-top
