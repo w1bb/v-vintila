@@ -2402,6 +2402,12 @@ body {
   background-position: center;
   background-size: cover;
 }
+#article.visible-proj-OtherProjects .wrapper .content .top-banner {
+  background-image: url("../img/lightbulb-g61cf30e41_640.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 @media screen and (max-width: 1000px) {
   #article.visible .wrapper {

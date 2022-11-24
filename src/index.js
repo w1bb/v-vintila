@@ -121,7 +121,7 @@ function article_content(content_of) {
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
-    } else if(content_of == "proj-WI-CRYPT") {
+    } else if (content_of == "proj-WI-CRYPT") {
         $("#article-main-info").html(
             "<div class=\"date\">September 2022</div>\
             <div class=\"title\">Wi-Crypt</div>\
@@ -148,7 +148,7 @@ function article_content(content_of) {
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
-    } else if(content_of == "proj-N-AI-SPAM") {
+    } else if (content_of == "proj-N-AI-SPAM") {
         $("#article-main-info").html(
             "<div class=\"date\">January 2022</div>\
             <div class=\"title\">N-AI Spam</div>\
@@ -177,7 +177,7 @@ function article_content(content_of) {
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
-    } else if(content_of == "proj-MN") {
+    } else if (content_of == "proj-MN") {
         $("#article-main-info").html(
             "<div class=\"date\">Work in progress</div>\
             <div class=\"title\">A numerical methods book</div>\
@@ -200,7 +200,7 @@ function article_content(content_of) {
                 <p>However, the book is only 80% ready and it written in Romanian, so it will not be released just yet. More info will come soon.</p>\
             </div>"
         );
-    } else if(content_of == "proj-V-VINTILA") {
+    } else if (content_of == "proj-V-VINTILA") {
         $("#article-main-info").html(
             "<div class=\"date\">November 2022 (ongoing)</div>\
             <div class=\"title\">My personal website</div>\
@@ -215,7 +215,7 @@ function article_content(content_of) {
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
-    } else if(content_of == "proj-WGJ") {
+    } else if (content_of == "proj-WGJ") {
         $("#article-main-info").html(
             "<div class=\"date\">Spring 2020</div>\
             <div class=\"title\">Wi's Game Jam</div>\
@@ -226,7 +226,7 @@ function article_content(content_of) {
                 <p>For privacy reasons (GDPR), the games were since removed from the public view. However, the screenshot from above contains four of the seven games written back then.</p>\
             </div>"
         );
-    } else if(content_of == "proj-HAZOSES") {
+    } else if (content_of == "proj-HAZOSES") {
         $("#article-main-info").html(
             "<div class=\"date\">April 2022</div>\
             <div class=\"title\">\"Hazoses\" Trivia Bot</div>\
@@ -239,7 +239,7 @@ function article_content(content_of) {
                 <p>I value keeping my code open&#8209;source. However, it's disheartening whenever I find that someone has copied my work without giving me proper credit. All I ask of you is to not claim my effort as your own.</p>\
             </div>"
         );
-    } else if(content_of == "proj-MasterMinds") {
+    } else if (content_of == "proj-MasterMinds") {
         $("#article-main-info").html(
             "<div class=\"date\">During high school</div>\
             <div class=\"title\">MasterMinds</div>\
@@ -248,6 +248,21 @@ function article_content(content_of) {
                 <p>Fast forward a few years later and I was part of the senior MasterMinds team. As a <b>Java</b> programmer, I have written the software required to qualify our team for the <b>national</b> stage of <a href=\"https://www.firstinspires.org/robotics/ftc\">FTC</a> and, in the end, <b>won third place</b>.</p>\
                 <p>The next year, I was <b>elected team leader</b>. Until high school was over, I helped my team win <b>other awards</b> (such as the Think Award and the Design Award) through excellent <b>communication skills</b> and inclusiveness.</p>\
                 <p>In university, I couldn't participate actively in the competition anymore, but I could <b>mentor</b> the other members of MasterMinds, and so I did. Due to Covid restrictions, the competition was postponed, but we had great fun building stronger bonds and learning more about robotics.</p>\
+            </div>"
+        );
+    } else if (content_of == "proj-OtherProjects") {
+        $("#article-main-info").html(
+            "<div class=\"date\">During university</div>\
+            <div class=\"title\">Other projects</div>\
+            <div class=\"text\">\
+                <p>There are many projects I have written over the years - some of these are various assignments, others were pure curiosities. Since they are still interesting and relevant, I will mention them on this list:</p>\
+                <ul>\
+                    <li><a href=\"https://github.com/w1bb/POO-Homework-01\"><b>GwentStone</b></a> - a complex card game simulator (a combination of Hearthstone and Gwent). The project was written in Java as a programming assignment (POO, 2nd year, 1st sem.);</li>\
+                    <li><b>ELF Loader</b> - an ELF loader for Linux that allows statically-linked executables to be loaded using a demand paging mechanism. The project was written in C as a programming assignment (SO, 2nd year, 1st sem.). Sadly, I don't currently have permissions to publish my work;</li>\
+                    <li><a href=\"https://github.com/w1bb/octave-simulator\"><b>Octave Simulator</b></a> - an Octave-like matrix-based simulator which computes a wide range of transformations on matrices, vectors and scalars. The project was written in C as a programming assignment (PCLP, 1st year, 1st sem.);</li>\
+                    <li><a href=\"https://github.com/w1bb/image-editor\"><b>Image Editor</b></a> - a PPM/PGM image manipulation software, designed for advanced filtering and algebraic transformations. The project was written in C as a programming assignment (PCLP, 1st year, 1st sem.);</li>\
+                </ul>\
+                <p>If these don't satisfy your curiosity, check out the rest of them on <a href=\"https://github.com/w1bb/\">my GitHub page</a> - have a safe journey!</p>\
             </div>"
         );
     } else {
